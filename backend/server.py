@@ -1759,25 +1759,29 @@ async def startup():
     # Seed / upsert products from products.json — add new codes without disturbing existing ones
     if PRODUCTS_JSON.exists():
         items = json.loads(PRODUCTS_JSON.read_text())
-        new_count = 0
+        
+        # Fetch existing codes in one query
+        existing_docs = await db.products.find({}, {"code": 1}).to_list(length=None)
+        existing_codes = {doc["code"] for doc in existing_docs}
+        
+        docs_to_insert = []
         for it in items:
-            existing = await db.products.find_one({"code": it["code"]})
-            if existing:
-                continue
-            await db.products.insert_one({
-                "code": it["code"],
-                "set_type": it.get("set_type", ""),
-                "items": it.get("items", ""),
-                "sg_price": int(it.get("sg_price", 0)),
-                "moq": int(it.get("moq", 50)),
-                "image": it.get("image"),
-                "override_price": None,
-                "visible": True,
-                "created_at": iso(now_utc()),
-            })
-            new_count += 1
-        if new_count:
-            logger.info(f"Seeded {new_count} new products from products.json")
+            if it["code"] not in existing_codes:
+                docs_to_insert.append({
+                    "code": it["code"],
+                    "set_type": it.get("set_type", ""),
+                    "items": it.get("items", ""),
+                    "sg_price": int(it.get("sg_price", 0)),
+                    "moq": int(it.get("moq", 50)),
+                    "image": it.get("image"),
+                    "override_price": None,
+                    "visible": True,
+                    "created_at": iso(now_utc()),
+                })
+        
+        if docs_to_insert:
+            await db.products.insert_many(docs_to_insert)
+            logger.info(f"Seeded {len(docs_to_insert)} new products from products.json")
 
 
 @app.on_event("shutdown")
