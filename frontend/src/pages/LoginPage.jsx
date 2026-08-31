@@ -13,7 +13,7 @@ function formatErr(detail) {
 }
 
 export default function LoginPage() {
-  const [identifier, setIdentifier] = useState("admin@oncost.shop");
+  const [identifier, setIdentifier] = useState("admin@oncostcatalog.in");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
@@ -84,7 +84,7 @@ export default function LoginPage() {
                   value={identifier}
                   onChange={(e) => setIdentifier(e.target.value)}
                   className="w-full pl-9 pr-3 py-3 border border-zinc-300 focus:border-[#002FA7] focus:ring-2 focus:ring-[#002FA7]/20 text-sm outline-none transition-all"
-                  placeholder="admin@oncost.shop  or  ONCOST-EMP-0001"
+                  placeholder="admin@oncostcatalog.in  or  ONCOST-EMP-0001"
                 />
               </div>
               <p className="text-[11px] text-zinc-400 mt-1">Partners can sign in with their Employee ID.</p>

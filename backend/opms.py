@@ -363,7 +363,7 @@ def _build_id_card_pdf(partner: dict, image_bytes: Optional[bytes]) -> bytes:
     c.rect(0, 0, W, 4 * mm, fill=1, stroke=0)
     c.setFillColor(colors.white)
     c.setFont("Helvetica", 5)
-    c.drawString(3 * mm, 1.5 * mm, "www.oncost.shop  ·  If found, please return to PRAGNA ENTERPRISES")
+    c.drawString(3 * mm, 1.5 * mm, "www.oncostcatalog.in  ·  If found, please return to PRAGNA ENTERPRISES")
 
     c.showPage()
     c.save()
