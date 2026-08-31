@@ -106,12 +106,16 @@ IMAGES_DIR = DATA_DIR / "product_images"
 PRODUCTS_JSON = DATA_DIR / "products.json"
 
 import certifi
+import asyncio
 
-client = None
+_clients = {}
 
 class DBProxy:
     def __getattr__(self, name):
-        return client[DB_NAME][name]
+        loop = asyncio.get_running_loop()
+        if loop not in _clients:
+            _clients[loop] = AsyncIOMotorClient(MONGO_URL, tlsCAFile=certifi.where())
+        return _clients[loop][DB_NAME][name]
 
 db = DBProxy()
 
@@ -1720,9 +1724,6 @@ async def get_image(filename: str):
 # ---------- Startup: seed admin + products + indexes ----------
 @app.on_event("startup")
 async def startup():
-    global client
-    client = AsyncIOMotorClient(MONGO_URL, tlsCAFile=certifi.where())
-    
     # Initialize persistent object storage (Emergent)
     init_storage()
 
