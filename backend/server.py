@@ -53,7 +53,7 @@ except Exception:
     pass
 
 # ---------- Config ----------
-MONGO_URL = os.environ["MONGO_URL"]
+MONGO_URL = os.environ["MONGO_URL"].strip('"\'')
 DB_NAME = os.environ["DB_NAME"]
 JWT_SECRET = os.environ["JWT_SECRET"]
 JWT_ALGO = "HS256"
@@ -105,7 +105,9 @@ DATA_DIR = ROOT_DIR / "data"
 IMAGES_DIR = DATA_DIR / "product_images"
 PRODUCTS_JSON = DATA_DIR / "products.json"
 
-client = AsyncIOMotorClient(MONGO_URL)
+import certifi
+
+client = AsyncIOMotorClient(MONGO_URL, tlsCAFile=certifi.where())
 db = client[DB_NAME]
 
 logger = logging.getLogger("oncost")
