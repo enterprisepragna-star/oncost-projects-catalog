@@ -6,6 +6,7 @@ ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / ".env")
 
 import os
+import sys
 import io
 import json
 import logging
@@ -13,6 +14,8 @@ import re
 import secrets
 from datetime import datetime, timezone, timedelta
 from typing import List, Optional
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import bcrypt
 import jwt
