@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo, useRef } from "react";
+import { createPortal } from "react-dom";
 import api, { imageUrl, formatINR } from "@/lib/api";
 import { ADMIN } from "@/constants/testIds";
 import { toast } from "sonner";
@@ -432,9 +433,9 @@ export default function ProductsPage() {
       </div>
 
       {/* Edit Details modal */}
-      {detailsId && (
+      {detailsId && createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 p-4"
           onClick={closeDetails}
           data-testid="details-modal"
         >
@@ -525,11 +526,12 @@ export default function ProductsPage() {
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
-      {showAdd && (
+      {showAdd && createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 p-4"
           onClick={closeAdd}
           data-testid="add-product-modal"
         >
@@ -650,9 +652,10 @@ export default function ProductsPage() {
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
-      {showImport && <ImportPdfModal onClose={() => setShowImport(false)} onDone={load} />}
+      {showImport && createPortal(<ImportPdfModal onClose={() => setShowImport(false)} onDone={load} />, document.body)}
     </div>
   );
 }
