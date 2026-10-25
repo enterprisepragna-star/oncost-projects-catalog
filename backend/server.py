@@ -114,7 +114,10 @@ class DBProxy:
     def __getattr__(self, name):
         loop = asyncio.get_running_loop()
         if loop not in _clients:
-            _clients[loop] = AsyncIOMotorClient(MONGO_URL, tlsCAFile=certifi.where())
+            kwargs = {}
+            if MONGO_URL.startswith("mongodb+srv://") or "tls=true" in MONGO_URL.lower():
+                kwargs["tlsCAFile"] = certifi.where()
+            _clients[loop] = AsyncIOMotorClient(MONGO_URL, **kwargs)
         return _clients[loop][DB_NAME][name]
 
 db = DBProxy()
@@ -234,8 +237,15 @@ class PricingRule(BaseModel):
 
 class ProductIn(BaseModel):
     code: str
+    name: Optional[str] = None
     set_type: str = ""
     items: str = ""
+    clean_items: Optional[List[str]] = None
+    category: Optional[str] = None
+    category_slug: Optional[str] = None
+    budget_tier: Optional[str] = None
+    occasions: Optional[List[str]] = None
+    description: Optional[str] = None
     sg_price: int
     moq: int = 50
     image: Optional[str] = None
@@ -248,8 +258,15 @@ class ProductIn(BaseModel):
 
 class ProductPatch(BaseModel):
     code: Optional[str] = None
+    name: Optional[str] = None
     set_type: Optional[str] = None
     items: Optional[str] = None
+    clean_items: Optional[List[str]] = None
+    category: Optional[str] = None
+    category_slug: Optional[str] = None
+    budget_tier: Optional[str] = None
+    occasions: Optional[List[str]] = None
+    description: Optional[str] = None
     sg_price: Optional[int] = None
     moq: Optional[int] = None
     image: Optional[str] = None
@@ -608,6 +625,126 @@ async def public_products():
         it.pop("sg_price", None)
         it.pop("override_price", None)
     return items
+
+
+@api.get("/public/products/{identifier}")
+async def public_product_detail(identifier: str):
+    ident_normalized = identifier.replace("-", " ").replace("_", " ").strip()
+    rule = await db.pricing_rule.find_one({"_id": "default"}) or {
+        "threshold": 1000, "below_increment": 50, "at_or_above_increment": 100,
+    }
+    prod = None
+    if ObjectId.is_valid(identifier):
+        prod = await db.products.find_one({"_id": ObjectId(identifier), "visible": {"$ne": False}})
+    if not prod:
+        prod = await db.products.find_one({
+            "code": {"$regex": f"^{re.escape(ident_normalized)}$", "$options": "i"},
+            "visible": {"$ne": False}
+        })
+    if not prod:
+        clean_code = re.sub(r'[^A-Za-z0-9]', '', identifier).upper()
+        cur = db.products.find({"visible": {"$ne": False}})
+        async for p in cur:
+            if re.sub(r'[^A-Za-z0-9]', '', p.get("code", "")).upper() == clean_code:
+                prod = p
+                break
+    if not prod:
+        raise HTTPException(status_code=404, detail="Product not found")
+
+    prod["id"] = str(prod.pop("_id"))
+    sg = prod.pop("sg_price", 0)
+    ov = prod.pop("override_price", None)
+    oncost = int(ov) if ov is not None else compute_oncost_price(sg, rule)
+    prod["oncost_price"] = oncost
+    return prod
+
+
+class PublicEnquiryIn(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    name: str
+    email: EmailStr
+    phone: str
+    company: Optional[str] = ""
+    location: Optional[str] = ""
+    required_date: Optional[str] = ""
+    quantity: Optional[int] = 50
+    branding_needed: Optional[bool] = True
+    branding_notes: Optional[str] = ""
+    notes: Optional[str] = ""
+    items: Optional[List[dict]] = []
+    referral_code: Optional[str] = None
+    hp: Optional[str] = None
+
+
+@api.post("/public/enquiry")
+async def submit_public_enquiry(enquiry: PublicEnquiryIn):
+    if enquiry.hp:  # Spam honeypot triggered
+        return {"ok": True, "reference": "ENQ-OK", "message": "Enquiry received."}
+
+    seq_doc = await db.counters.find_one_and_update(
+        {"_id": "enquiry"},
+        {"$inc": {"seq": 1}},
+        upsert=True, return_document=True,
+    )
+    seq = seq_doc["seq"] if seq_doc else 1
+    ref = f"ENQ-{datetime.now().strftime('%Y%m')}-{seq:04d}"
+
+    items_summary = ", ".join([f"{it.get('code', 'Item')} (x{it.get('quantity', enquiry.quantity or 50)})" for it in (enquiry.items or [])])
+    full_notes = (enquiry.notes or "").strip()
+    notes_parts = []
+    if items_summary:
+        notes_parts.append(f"Shortlisted Products: {items_summary}")
+    if enquiry.location:
+        notes_parts.append(f"Location: {enquiry.location}")
+    if enquiry.required_date:
+        notes_parts.append(f"Required By: {enquiry.required_date}")
+    notes_parts.append(f"Custom Branding: {'Yes' if enquiry.branding_needed else 'No'}")
+    if enquiry.branding_notes:
+        notes_parts.append(f"Branding Notes: {enquiry.branding_notes}")
+    if full_notes:
+        notes_parts.append(f"Client Message:\n{full_notes}")
+        
+    compiled_notes = "\n".join(notes_parts)
+
+    lead_doc = {
+        "enquiry_ref": ref,
+        "name": enquiry.name.strip(),
+        "company": (enquiry.company or "").strip(),
+        "contact_person": enquiry.name.strip(),
+        "phone": enquiry.phone.strip(),
+        "email": str(enquiry.email).strip().lower(),
+        "location": (enquiry.location or "").strip(),
+        "required_date": (enquiry.required_date or "").strip(),
+        "quantity": enquiry.quantity or 50,
+        "branding_needed": bool(enquiry.branding_needed),
+        "items": enquiry.items or [],
+        "source": "Website Enquiry",
+        "status": "new",
+        "notes": compiled_notes,
+        "referral_code": enquiry.referral_code,
+        "created_at": iso(now_utc()),
+        "created_by": "public_web",
+    }
+
+    res = await db.leads.insert_one(lead_doc)
+
+    try:
+        from emailer import send_email, is_enabled
+        if is_enabled():
+            await send_email(
+                to=ADMIN_EMAIL,
+                subject=f"New ONCOST Website Quote Enquiry [{ref}] from {enquiry.name}",
+                html=f"<h3>New Corporate Gifting Enquiry ({ref})</h3><p><b>Name:</b> {enquiry.name}</p><p><b>Company:</b> {enquiry.company}</p><p><b>Phone:</b> {enquiry.phone}</p><p><b>Email:</b> {enquiry.email}</p><p><b>Details:</b><br/>{compiled_notes.replace(chr(10), '<br/>')}</p>"
+            )
+    except Exception as e:
+        logger.warning(f"Enquiry email notice error: {e}")
+
+    return {
+        "ok": True,
+        "reference": ref,
+        "message": f"Thank you! Your quotation enquiry ({ref}) has been received. Our corporate gifting specialists will contact you shortly with a customized proposal."
+    }
+
 
 
 @api.post("/products")

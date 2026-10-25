@@ -11,6 +11,7 @@ import ForgotPasswordPage from "@/pages/ForgotPasswordPage";
 import ResetPasswordPage from "@/pages/ResetPasswordPage";
 import HomeRedirect from "@/pages/HomeRedirect";
 import PublicCatalogPage from "@/pages/PublicCatalogPage";
+import PublicProductDetailPage from "@/pages/PublicProductDetailPage";
 import PublicQuotationPage from "@/pages/PublicQuotationPage";
 import ProductsPage from "@/pages/admin/ProductsPage";
 import CategoriesPage from "@/pages/admin/CategoriesPage";
@@ -53,6 +54,8 @@ export default function App() {
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} />
           <Route path="/catalog" element={<PublicCatalogPage />} />
+          <Route path="/catalog/:code" element={<PublicProductDetailPage />} />
+          <Route path="/product/:code" element={<PublicProductDetailPage />} />
           <Route path="/q/:token" element={<PublicQuotationPage />} />
           <Route path="/partners/register" element={<PartnerRegisterPage />} />
           <Route path="/refer/:code" element={<ReferralLandingPage />} />

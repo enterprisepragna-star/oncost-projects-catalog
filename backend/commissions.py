@@ -73,6 +73,22 @@ class CommissionPayIn(BaseModel):
     remarks: str = ""
 
 
+class IncentiveIn(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    partner_user_id: str
+    amount: float
+    reason: str = ""
+    contract_ref: str = ""    # e.g. multi-year contract identifier
+
+
+class IncentivePayIn(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    payment_reference: str = ""
+    utr_number: str = ""
+    remarks: str = ""
+
+
+
 # ------------------------------------------------------------------ SERIALIZERS
 def _serialize(doc: dict) -> dict:
     if not doc:
@@ -312,19 +328,6 @@ def build_commissions_router(db, get_current_user) -> APIRouter:
         return {"ok": True}
 
     # ============= INCENTIVES (discretionary — no threshold gate) =============
-    class IncentiveIn(BaseModel):
-        model_config = ConfigDict(extra="ignore")
-        partner_user_id: str
-        amount: float
-        reason: str = ""
-        contract_ref: str = ""    # e.g. multi-year contract identifier
-
-    class IncentivePayIn(BaseModel):
-        model_config = ConfigDict(extra="ignore")
-        payment_reference: str = ""
-        utr_number: str = ""
-        remarks: str = ""
-
     @r.post("/incentives")
     async def create_incentive(payload: IncentiveIn, _user=Depends(_admin_only)):
         if payload.amount <= 0:

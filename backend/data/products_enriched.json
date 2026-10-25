@@ -1,0 +1,3625 @@
+[
+  {
+    "_id": "6a7d6bc877d5510bbd4e2592",
+    "code": "SG 547",
+    "set_type": "3in1",
+    "items": "Temperature Flask, Metal pen, Note Book",
+    "sg_price": 390,
+    "moq": 50,
+    "image": "SG_547.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:28.765826+00:00",
+    "name": "Smart LED Flask & Hardcover Journal Set (3-IN-1)",
+    "clean_items": [
+      "Smart LED Temperature Flask (500ml)",
+      "Executive Metal Rollerball Pen",
+      "Executive Hardcover Journal"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Smart LED Temperature Flask (500ml), Executive Metal Rollerball Pen, Executive Hardcover Journal. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Smart LED Temperature Flask (500ml)",
+      "Executive Metal Rollerball Pen",
+      "Executive Hardcover Journal"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bc977d5510bbd4e2593",
+    "code": "SG 548",
+    "set_type": "4in1",
+    "items": "Temperature Flask, Metal pen, Note Book, Key Chain",
+    "sg_price": 435,
+    "moq": 50,
+    "image": "SG_548.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:29.229678+00:00",
+    "name": "Smart LED Flask & Hardcover Journal Set (4-IN-1)",
+    "clean_items": [
+      "Smart LED Temperature Flask (500ml)",
+      "Executive Metal Rollerball Pen",
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Smart LED Temperature Flask (500ml), Executive Metal Rollerball Pen, Executive Hardcover Journal, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Smart LED Temperature Flask (500ml)",
+      "Executive Metal Rollerball Pen",
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bc977d5510bbd4e2594",
+    "code": "SG 550",
+    "set_type": "5in1",
+    "items": "Temperature Flask, Metal pen, Note Book, Key Chain, Insulated Mug",
+    "sg_price": 800,
+    "moq": 50,
+    "image": "SG_550.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:29.694056+00:00",
+    "name": "Regal Thermal Drinkware & Executive Journal Combo (5-IN-1)",
+    "clean_items": [
+      "Smart LED Temperature Flask (500ml)",
+      "Executive Metal Rollerball Pen",
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Stainless Steel Thermal Mug"
+    ],
+    "set_type_display": "5-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 5-IN-1 corporate gift package combining Smart LED Temperature Flask (500ml), Executive Metal Rollerball Pen, Executive Hardcover Journal, Branded Metal Keychain, Stainless Steel Thermal Mug. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Smart LED Temperature Flask (500ml)",
+      "Executive Metal Rollerball Pen",
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Stainless Steel Thermal Mug"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bca77d5510bbd4e2595",
+    "code": "SG 576",
+    "set_type": "2in1",
+    "items": "Note Book , Pen",
+    "sg_price": 250,
+    "moq": 100,
+    "image": "SG_576.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:30.157752+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 576)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "2-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 2-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bca77d5510bbd4e2596",
+    "code": "SG 573",
+    "set_type": "2in1",
+    "items": "Note Book , Pen",
+    "sg_price": 250,
+    "moq": 100,
+    "image": "SG_573.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:30.621368+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 573)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "2-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 2-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bcb77d5510bbd4e2597",
+    "code": "SG 575",
+    "set_type": "2in1",
+    "items": "Note Book , Pen",
+    "sg_price": 345,
+    "moq": 100,
+    "image": "SG_575.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:31.086125+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 575)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "2-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 2-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bcb77d5510bbd4e2598",
+    "code": "SG 572",
+    "set_type": "2in1",
+    "items": "Note Book , Pen",
+    "sg_price": 335,
+    "moq": 100,
+    "image": "SG_572.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:31.550699+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 572)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "2-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 2-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bcc77d5510bbd4e2599",
+    "code": "SG 574",
+    "set_type": "2in1",
+    "items": "Note Book , Pen",
+    "sg_price": 345,
+    "moq": 100,
+    "image": "SG_574.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:32.014503+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 574)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "2-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 2-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bcc77d5510bbd4e259a",
+    "code": "SG 577",
+    "set_type": "3in1",
+    "items": "Note Book , Pen & Key Chain",
+    "sg_price": 350,
+    "moq": 100,
+    "image": "SG_577.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:32.478103+00:00",
+    "name": "Essential Corporate Journal, Pen & Keychain Trio (SG 577)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bcc77d5510bbd4e259b",
+    "code": "SG 583",
+    "set_type": "3in1",
+    "items": "Note Book , Pen & Key Chain",
+    "sg_price": 350,
+    "moq": 100,
+    "image": "SG_583.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:32.954336+00:00",
+    "name": "Essential Corporate Journal, Pen & Keychain Trio (SG 583)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bcd77d5510bbd4e259c",
+    "code": "SG 578",
+    "set_type": "3in1",
+    "items": "Note Book , Pen & Key Chain",
+    "sg_price": 350,
+    "moq": 100,
+    "image": "SG_578.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:33.417823+00:00",
+    "name": "Essential Corporate Journal, Pen & Keychain Trio (SG 578)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bcd77d5510bbd4e259d",
+    "code": "SG 582",
+    "set_type": "3in1",
+    "items": "Note Book , Pen & Key Chain",
+    "sg_price": 350,
+    "moq": 100,
+    "image": "SG_582.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:33.881146+00:00",
+    "name": "Essential Corporate Journal, Pen & Keychain Trio (SG 582)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bce77d5510bbd4e259e",
+    "code": "SG 581",
+    "set_type": "3in1",
+    "items": "Note Book , Pen & Key Chain",
+    "sg_price": 350,
+    "moq": 100,
+    "image": "SG_581.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:34.344338+00:00",
+    "name": "Essential Corporate Journal, Pen & Keychain Trio (SG 581)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bce77d5510bbd4e259f",
+    "code": "SG 580",
+    "set_type": "3in1",
+    "items": "Note Book , Pen & Key Chain",
+    "sg_price": 350,
+    "moq": 100,
+    "image": "SG_580.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:34.808070+00:00",
+    "name": "Essential Corporate Journal, Pen & Keychain Trio (SG 580)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bcf77d5510bbd4e25a0",
+    "code": "SG 579",
+    "set_type": "3in1",
+    "items": "Note Book , Pen & Key Chain",
+    "sg_price": 350,
+    "moq": 100,
+    "image": "SG_579.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:35.271584+00:00",
+    "name": "Essential Corporate Journal, Pen & Keychain Trio (SG 579)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bcf77d5510bbd4e25a1",
+    "code": "SG 590",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 460,
+    "moq": 100,
+    "image": "SG_590.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:35.734585+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 590)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd077d5510bbd4e25a2",
+    "code": "SG 597",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_597.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:36.198171+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 597)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd077d5510bbd4e25a3",
+    "code": "SG 593",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_593.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:36.661204+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 593)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd177d5510bbd4e25a4",
+    "code": "SG 592",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 490,
+    "moq": 100,
+    "image": "SG_592.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:37.126058+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 592)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd177d5510bbd4e25a5",
+    "code": "SG 591",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_591.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:37.589215+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 591)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd277d5510bbd4e25a6",
+    "code": "SG 596",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_596.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:38.052709+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 596)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd277d5510bbd4e25a7",
+    "code": "SG 595",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 400,
+    "moq": 100,
+    "image": "SG_595.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:38.515386+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 595)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd277d5510bbd4e25a8",
+    "code": "SG 594",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_594.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:38.978893+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 594)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd377d5510bbd4e25a9",
+    "code": "SG 598",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 480,
+    "moq": 100,
+    "image": "SG_598.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:39.442234+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 598)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd377d5510bbd4e25aa",
+    "code": "SG 603",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_603.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:39.905279+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 603)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd477d5510bbd4e25ab",
+    "code": "SG 601",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_601.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:40.368351+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 601)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd477d5510bbd4e25ac",
+    "code": "SG 600",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_600.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:40.831295+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 600)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd577d5510bbd4e25ad",
+    "code": "SG 599",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_599.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:41.297075+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 599)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd577d5510bbd4e25ae",
+    "code": "SG 602",
+    "set_type": "4in1",
+    "items": "Note Book , Pen, Card Holder & Key Chain",
+    "sg_price": 450,
+    "moq": 100,
+    "image": "SG_602.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:41.760445+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 602)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd677d5510bbd4e25af",
+    "code": "SG 567",
+    "set_type": "4in1",
+    "items": "Insulated Flask 500ml, 2 steel Mug, Auto Open Auto Close, Umbrella",
+    "sg_price": 950,
+    "moq": 50,
+    "image": "SG_567.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:42.223067+00:00",
+    "name": "All-Weather Travel & Executive Drinkware Combo (4-IN-1)",
+    "clean_items": [
+      "Vacuum Insulated Flask",
+      "Stainless Steel Mug",
+      "Auto Open/Close Travel Umbrella"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Vacuum Insulated Flask, Stainless Steel Mug, Auto Open/Close Travel Umbrella. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Vacuum Insulated Flask",
+      "Stainless Steel Mug",
+      "Auto Open/Close Travel Umbrella"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd677d5510bbd4e25b0",
+    "code": "SG 565",
+    "set_type": "3in1",
+    "items": "Insulated Temp Mug, Note Book, Metal Pen",
+    "sg_price": 700,
+    "moq": 50,
+    "image": "SG_565.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:42.686124+00:00",
+    "name": "Smart Temp Mug & Executive Journal Set (3-IN-1)",
+    "clean_items": [
+      "Smart LED Temperature Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Smart LED Temperature Mug, Executive Hardcover Journal, Executive Metal Rollerball Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Smart LED Temperature Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd777d5510bbd4e25b1",
+    "code": "SG 564",
+    "set_type": "3in1",
+    "items": "Insulated Mug, Note Book, Metal Pen",
+    "sg_price": 900,
+    "moq": 50,
+    "image": "SG_564.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:43.149415+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (3-IN-1)",
+    "clean_items": [
+      "Stainless Steel Thermal Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Stainless Steel Thermal Mug, Executive Hardcover Journal, Executive Metal Rollerball Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Stainless Steel Thermal Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd777d5510bbd4e25b2",
+    "code": "SG 563",
+    "set_type": "3in1",
+    "items": "Insulated Flask, Note Book, Metal Pen",
+    "sg_price": 775,
+    "moq": 50,
+    "image": "SG_563.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:43.612487+00:00",
+    "name": "3-IN-1 Vacuum Insulated Flask & Executive Hardcover Journal Set (SG 563)",
+    "clean_items": [
+      "Vacuum Insulated Flask",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Vacuum Insulated Flask, Executive Hardcover Journal, Executive Metal Rollerball Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Vacuum Insulated Flask",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd877d5510bbd4e25b3",
+    "code": "SG 557",
+    "set_type": "3in1",
+    "items": "Temperature Bottle, Note Book, Metal Pen",
+    "sg_price": 600,
+    "moq": 50,
+    "image": "SG_557.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:44.076249+00:00",
+    "name": "3-IN-1 Smart LED Temperature Bottle (500ml) & Executive Hardcover Journal Set (SG 557)",
+    "clean_items": [
+      "Smart LED Temperature Bottle (500ml)",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Smart LED Temperature Bottle (500ml), Executive Hardcover Journal, Executive Metal Rollerball Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Smart LED Temperature Bottle (500ml)",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd877d5510bbd4e25b4",
+    "code": "SG 559",
+    "set_type": "3in1",
+    "items": "Insulated Mug, Note Book, Metal Pen",
+    "sg_price": 550,
+    "moq": 50,
+    "image": "SG_559.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:44.539501+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (3-IN-1)",
+    "clean_items": [
+      "Stainless Steel Thermal Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Stainless Steel Thermal Mug, Executive Hardcover Journal, Executive Metal Rollerball Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Stainless Steel Thermal Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd977d5510bbd4e25b5",
+    "code": "SG 558",
+    "set_type": "",
+    "items": "Insulated Mug, Note Book, Metal Pen",
+    "sg_price": 550,
+    "moq": 50,
+    "image": "SG_558.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:45.002201+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (3-IN-1)",
+    "clean_items": [
+      "Stainless Steel Thermal Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Stainless Steel Thermal Mug, Executive Hardcover Journal, Executive Metal Rollerball Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Stainless Steel Thermal Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd977d5510bbd4e25b6",
+    "code": "SG 556",
+    "set_type": "3in1",
+    "items": "Insulated Mug, Note Book, Metal Pen",
+    "sg_price": 750,
+    "moq": 50,
+    "image": "SG_556.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:45.465140+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (3-IN-1)",
+    "clean_items": [
+      "Stainless Steel Thermal Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Stainless Steel Thermal Mug, Executive Hardcover Journal, Executive Metal Rollerball Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Stainless Steel Thermal Mug",
+      "Executive Hardcover Journal",
+      "Executive Metal Rollerball Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bd977d5510bbd4e25b7",
+    "code": "SG 562",
+    "set_type": "3in1",
+    "items": "Note Book, Wallet, Pen",
+    "sg_price": 400,
+    "moq": 50,
+    "image": "SG_562.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:45.927672+00:00",
+    "name": "3-IN-1 Executive Hardcover Journal & RFID-Protected Leather Wallet Set (SG 562)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "RFID-Protected Leather Wallet",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, RFID-Protected Leather Wallet, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "RFID-Protected Leather Wallet",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bda77d5510bbd4e25b8",
+    "code": "SG 561",
+    "set_type": "4in1",
+    "items": "Note Book, Key Chain, Card Holder, Pen",
+    "sg_price": 900,
+    "moq": 50,
+    "image": "SG_561.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:46.391013+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 561)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bda77d5510bbd4e25b9",
+    "code": "SG 568",
+    "set_type": "2in1",
+    "items": "Note Book , Pen",
+    "sg_price": 270,
+    "moq": 100,
+    "image": "SG_568.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:46.854191+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 568)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "2-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 2-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bdb77d5510bbd4e25ba",
+    "code": "SG 570",
+    "set_type": "2in1",
+    "items": "Mobile Holder Note Book , Pen",
+    "sg_price": 395,
+    "moq": 100,
+    "image": "SG_570.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:47.327420+00:00",
+    "name": "2-IN-1 Executive Notebook with Phone Pocket & Signature Metal Pen Set (SG 570)",
+    "clean_items": [
+      "Executive Notebook with Phone Pocket",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "2-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 2-IN-1 corporate gift package combining Executive Notebook with Phone Pocket, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Notebook with Phone Pocket",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bdb77d5510bbd4e25bb",
+    "code": "SG 569",
+    "set_type": "2in1",
+    "items": "Note Book , Pen",
+    "sg_price": 315,
+    "moq": 100,
+    "image": "SG_569.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:47.791060+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 569)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "2-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 2-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bdc77d5510bbd4e25bc",
+    "code": "SG 571",
+    "set_type": "2in1",
+    "items": "Note Book , Pen",
+    "sg_price": 265,
+    "moq": 100,
+    "image": "SG_571.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:48.260130+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 571)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "2-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 2-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bdc77d5510bbd4e25bd",
+    "code": "SG 551",
+    "set_type": "6in1",
+    "items": "SS Bottle, Mobile Stand, Note Book, Key Chain, SS Mug, Pen",
+    "sg_price": 1275,
+    "moq": 50,
+    "image": "SG_551.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:48.742122+00:00",
+    "name": "6-IN-1 Stainless Steel Bottle & Foldable Metallic Mobile Stand Set (SG 551)",
+    "clean_items": [
+      "Stainless Steel Bottle",
+      "Foldable Metallic Mobile Stand",
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Stainless Steel Mug",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Stainless Steel Bottle, Foldable Metallic Mobile Stand, Executive Hardcover Journal, Branded Metal Keychain, Stainless Steel Mug, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Stainless Steel Bottle",
+      "Foldable Metallic Mobile Stand",
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Stainless Steel Mug",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bdd77d5510bbd4e25be",
+    "code": "SG 549",
+    "set_type": "5in1",
+    "items": "Temperature Flask, Metal pen, Note Book, Key Chain, Mug",
+    "sg_price": 750,
+    "moq": 50,
+    "image": "SG_549.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:49.208187+00:00",
+    "name": "Smart LED Flask & Hardcover Journal Set (5-IN-1)",
+    "clean_items": [
+      "Smart LED Temperature Flask (500ml)",
+      "Executive Metal Rollerball Pen",
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Stainless Steel Coffee Mug"
+    ],
+    "set_type_display": "5-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 5-IN-1 corporate gift package combining Smart LED Temperature Flask (500ml), Executive Metal Rollerball Pen, Executive Hardcover Journal, Branded Metal Keychain, Stainless Steel Coffee Mug. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Smart LED Temperature Flask (500ml)",
+      "Executive Metal Rollerball Pen",
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Stainless Steel Coffee Mug"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bdd77d5510bbd4e25bf",
+    "code": "SG 552",
+    "set_type": "3in1",
+    "items": "Temperature Bottle, 2 Tea Mug",
+    "sg_price": 350,
+    "moq": 100,
+    "image": "SG_552.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:49.670729+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (3-IN-1)",
+    "clean_items": [
+      "Smart LED Temperature Bottle (500ml)",
+      "Stainless Steel Coffee Mug"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Diwali & Festive"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Smart LED Temperature Bottle (500ml), Stainless Steel Coffee Mug. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Smart LED Temperature Bottle (500ml)",
+      "Stainless Steel Coffee Mug"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bde77d5510bbd4e25c0",
+    "code": "SG 554",
+    "set_type": "3in1",
+    "items": "Insulated Flask, 2 Insulated Mug",
+    "sg_price": 950,
+    "moq": 50,
+    "image": "SG_554.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:50.134962+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (3-IN-1)",
+    "clean_items": [
+      "Vacuum Insulated Flask",
+      "Stainless Steel Thermal Mug"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Vacuum Insulated Flask, Stainless Steel Thermal Mug. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Vacuum Insulated Flask",
+      "Stainless Steel Thermal Mug"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bde77d5510bbd4e25c1",
+    "code": "SG 555",
+    "set_type": "3in1",
+    "items": "Insulated Bottle, 2 Steel Mug",
+    "sg_price": 850,
+    "moq": 50,
+    "image": "SG_555.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:50.614001+00:00",
+    "name": "3-IN-1 Insulated Stainless Steel Bottle & Stainless Steel Mug Set (SG 555)",
+    "clean_items": [
+      "Insulated Stainless Steel Bottle",
+      "Stainless Steel Mug"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Insulated Stainless Steel Bottle, Stainless Steel Mug. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Insulated Stainless Steel Bottle",
+      "Stainless Steel Mug"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bdf77d5510bbd4e25c2",
+    "code": "SG 553",
+    "set_type": "4in1",
+    "items": "750 ml Flask, Beer Mug, Key Chain, Pen",
+    "sg_price": 950,
+    "moq": 50,
+    "image": "SG_553.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:51.077449+00:00",
+    "name": "4-IN-1 Stainless Steel Insulated Flask & Stainless Steel Tankard Mug Set (SG 553)",
+    "clean_items": [
+      "Stainless Steel Insulated Flask",
+      "Stainless Steel Tankard Mug",
+      "Branded Metal Keychain",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Stainless Steel Insulated Flask, Stainless Steel Tankard Mug, Branded Metal Keychain, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Stainless Steel Insulated Flask",
+      "Stainless Steel Tankard Mug",
+      "Branded Metal Keychain",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bdf77d5510bbd4e25c3",
+    "code": "SG 521",
+    "set_type": "3in1",
+    "items": "Note Book &Pen",
+    "sg_price": 325,
+    "moq": 50,
+    "image": "SG_521.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:51.541487+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 521)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be077d5510bbd4e25c4",
+    "code": "SG 527",
+    "set_type": "3in1",
+    "items": "Note Book &Pen",
+    "sg_price": 350,
+    "moq": 50,
+    "image": "SG_527.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:52.005576+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 527)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be077d5510bbd4e25c5",
+    "code": "SG 526",
+    "set_type": "3in1",
+    "items": "Note Book &Pen",
+    "sg_price": 350,
+    "moq": 50,
+    "image": "SG_526.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:52.468602+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 526)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be077d5510bbd4e25c6",
+    "code": "SG 525",
+    "set_type": "3in1",
+    "items": "Note Book &Pen",
+    "sg_price": 350,
+    "moq": 50,
+    "image": "SG_525.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:52.931820+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 525)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be177d5510bbd4e25c7",
+    "code": "SG 524",
+    "set_type": "3in1",
+    "items": "Note Book &Pen",
+    "sg_price": 350,
+    "moq": 50,
+    "image": "SG_524.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:53.394906+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 524)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be177d5510bbd4e25c8",
+    "code": "SG 523",
+    "set_type": "3in1",
+    "items": "Note Book &Pen",
+    "sg_price": 280,
+    "moq": 50,
+    "image": "SG_523.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:53.858308+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 523)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be277d5510bbd4e25c9",
+    "code": "SG 522",
+    "set_type": "3in1",
+    "items": "Note Book &Pen",
+    "sg_price": 250,
+    "moq": 50,
+    "image": "SG_522.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:54.322369+00:00",
+    "name": "Classic Executive Journal & Pen Duo (SG 522)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be277d5510bbd4e25ca",
+    "code": "SG 536",
+    "set_type": "6in1",
+    "items": "Note Book, Key, Chain,Pen, Power Bank 10,000, MAH,Wireless, Mouse",
+    "sg_price": 1490,
+    "moq": 50,
+    "image": "SG_536.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:54.785029+00:00",
+    "name": "6-IN-1 Executive Hardcover Journal & Branded Metal Keychain Set (SG 536)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Signature Metal Pen",
+      "10,000mAh Fast Power Bank",
+      "Wireless",
+      "Mouse"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Signature Metal Pen, 10,000mAh Fast Power Bank, Wireless, Mouse. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Signature Metal Pen",
+      "10,000mAh Fast Power Bank",
+      "Wireless",
+      "Mouse"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be377d5510bbd4e25cb",
+    "code": "SG 537",
+    "set_type": "6in1",
+    "items": "Note Book, Key Chain, 3 in 1 Data Cable, Power Bank 10,000 MAH, Wireless Charger, Gadget Pouch",
+    "sg_price": 2350,
+    "moq": 50,
+    "image": "SG_537.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:55.252745+00:00",
+    "name": "6-IN-1 Executive Hardcover Journal & Branded Metal Keychain Set (SG 537)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "3-in-1 Fast Braided Cable",
+      "10,000mAh Fast Power Bank",
+      "Fast Wireless Charging Pad",
+      "Protective Travel Tech Pouch"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "Above \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, 3-in-1 Fast Braided Cable, 10,000mAh Fast Power Bank, Fast Wireless Charging Pad, Protective Travel Tech Pouch. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "3-in-1 Fast Braided Cable",
+      "10,000mAh Fast Power Bank",
+      "Fast Wireless Charging Pad",
+      "Protective Travel Tech Pouch"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be377d5510bbd4e25cc",
+    "code": "SG 543",
+    "set_type": "4in1",
+    "items": "Power Bank Note Book 8000 MAH, Pen Drive,Flask, Metal pen",
+    "sg_price": 2650,
+    "moq": 25,
+    "image": "SG_543.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:55.715746+00:00",
+    "name": "4-IN-1 Fast-Charging Power Bank & Signature Metal Pen Set (SG 543)",
+    "clean_items": [
+      "Fast-Charging Power Bank",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Executive Metal Rollerball Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "Above \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Fast-Charging Power Bank, Signature Metal Pen, Stainless Steel Insulated Flask, Executive Metal Rollerball Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Fast-Charging Power Bank",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Executive Metal Rollerball Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be477d5510bbd4e25cd",
+    "code": "SG 542",
+    "set_type": "7in1",
+    "items": "Note Book, Power Bank 10,000 MAH, Wireless Mouse ,Key Chain, Card Holder,Pen, Drive ,Pen",
+    "sg_price": 3500,
+    "moq": 25,
+    "image": "SG_542.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:56.179022+00:00",
+    "name": "Apex Executive Tech Suite (7-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "10,000mAh Fast Power Bank",
+      "Wireless Optical Mouse",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "7-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "Above \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 7-IN-1 corporate gift package combining Executive Hardcover Journal, 10,000mAh Fast Power Bank, Wireless Optical Mouse, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "10,000mAh Fast Power Bank",
+      "Wireless Optical Mouse",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be477d5510bbd4e25ce",
+    "code": "SG 538",
+    "set_type": "7in1",
+    "items": "Note Book, 3 in 1 Data Cable, Power Bank 5,000 MAH, Ss Mug,Insulated, Flask, Pen Drive ,Pen",
+    "sg_price": 1750,
+    "moq": 50,
+    "image": "SG_538.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:56.657288+00:00",
+    "name": "7-IN-1 Executive Hardcover Journal & 3-in-1 Fast Braided Cable Set (SG 538)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "3-in-1 Fast Braided Cable",
+      "5,000mAh Slim Power Bank",
+      "Stainless Steel Mug",
+      "Insulated",
+      "Stainless Steel Insulated Flask",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "7-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 7-IN-1 corporate gift package combining Executive Hardcover Journal, 3-in-1 Fast Braided Cable, 5,000mAh Slim Power Bank, Stainless Steel Mug, Insulated, Stainless Steel Insulated Flask, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "3-in-1 Fast Braided Cable",
+      "5,000mAh Slim Power Bank",
+      "Stainless Steel Mug",
+      "Insulated",
+      "Stainless Steel Insulated Flask",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be577d5510bbd4e25cf",
+    "code": "SG 541",
+    "set_type": "7in1",
+    "items": "Note Book, Power Bank 10,000 MAH, Wireless Mouse ,Key Chain, Card Holder,32 Pen Drive ,Pen",
+    "sg_price": 1650,
+    "moq": 50,
+    "image": "SG_541.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:57.122084+00:00",
+    "name": "Apex Executive Tech Suite (7-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "10,000mAh Fast Power Bank",
+      "Wireless Optical Mouse",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "7-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 7-IN-1 corporate gift package combining Executive Hardcover Journal, 10,000mAh Fast Power Bank, Wireless Optical Mouse, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "10,000mAh Fast Power Bank",
+      "Wireless Optical Mouse",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be577d5510bbd4e25d0",
+    "code": "SG 540",
+    "set_type": "7in1",
+    "items": "Note Book, 3 in 1 Data Cable, Power Bank 5,000 MAH, Ss Mug,Insulated, Flask, Pen Drive ,Pen",
+    "sg_price": 1450,
+    "moq": 50,
+    "image": "SG_540.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:57.587273+00:00",
+    "name": "7-IN-1 Executive Hardcover Journal & 3-in-1 Fast Braided Cable Set (SG 540)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "3-in-1 Fast Braided Cable",
+      "5,000mAh Slim Power Bank",
+      "Stainless Steel Mug",
+      "Insulated",
+      "Stainless Steel Insulated Flask",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "7-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 7-IN-1 corporate gift package combining Executive Hardcover Journal, 3-in-1 Fast Braided Cable, 5,000mAh Slim Power Bank, Stainless Steel Mug, Insulated, Stainless Steel Insulated Flask, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "3-in-1 Fast Braided Cable",
+      "5,000mAh Slim Power Bank",
+      "Stainless Steel Mug",
+      "Insulated",
+      "Stainless Steel Insulated Flask",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be677d5510bbd4e25d1",
+    "code": "SG 539",
+    "set_type": "4in1",
+    "items": "Mobile Stand ,Power Bank 10,000 Mah, Wireless Mouse , Pen Drive",
+    "sg_price": 1290,
+    "moq": 50,
+    "image": "SG_539.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:58.057623+00:00",
+    "name": "Apex Executive Tech Suite (4-IN-1)",
+    "clean_items": [
+      "Foldable Metallic Mobile Stand",
+      "10,000mAh Fast Power Bank",
+      "Wireless Optical Mouse",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Foldable Metallic Mobile Stand, 10,000mAh Fast Power Bank, Wireless Optical Mouse, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Foldable Metallic Mobile Stand",
+      "10,000mAh Fast Power Bank",
+      "Wireless Optical Mouse",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be677d5510bbd4e25d2",
+    "code": "SG 501",
+    "set_type": "6in1",
+    "items": "Note Book,Mug,Pen,Flask, Card Holder, Key Chain",
+    "sg_price": 1150,
+    "moq": 50,
+    "image": "SG_501.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:58.521324+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (6-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Signature Metal Pen, Stainless Steel Insulated Flask, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be677d5510bbd4e25d3",
+    "code": "SG 502",
+    "set_type": "6in1",
+    "items": "Note Book,Mug,Pen,Flask, Speaker, Key Chain",
+    "sg_price": 1300,
+    "moq": 50,
+    "image": "SG_502.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:58.993305+00:00",
+    "name": "Prestige Audio & Executive Desk Hamper (6-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Portable Wireless Bluetooth Speaker",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Signature Metal Pen, Stainless Steel Insulated Flask, Portable Wireless Bluetooth Speaker, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Portable Wireless Bluetooth Speaker",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be777d5510bbd4e25d4",
+    "code": "SG 503",
+    "set_type": "6in1",
+    "items": "Note Book,Desktop Matt, Pen, Pen Holder, Calendar,Key, Chain",
+    "sg_price": 1300,
+    "moq": 50,
+    "image": "SG_503.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:59.458055+00:00",
+    "name": "Artisan Desk Organizer & Journal Hamper (6-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Vegan Leather Desk Mat",
+      "Signature Metal Pen",
+      "Perpetual Metal Desk Calendar",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Desk & Workspace",
+    "category_slug": "desk-workspace",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Executive Hardcover Journal, Vegan Leather Desk Mat, Signature Metal Pen, Perpetual Metal Desk Calendar, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Vegan Leather Desk Mat",
+      "Signature Metal Pen",
+      "Perpetual Metal Desk Calendar",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be777d5510bbd4e25d5",
+    "code": "SG 504",
+    "set_type": "4in1",
+    "items": "Note Book,Mug,Plant Tube, Desk Organiser, Glass Mug",
+    "sg_price": 1250,
+    "moq": 50,
+    "image": "SG_504.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:01:59.922979+00:00",
+    "name": "Green Workspace Desk Planter & Journal Set (4-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Eco Desk Hydroponic Planter",
+      "Desk Organizer",
+      "Stainless Steel Mug"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Eco Desk Hydroponic Planter, Desk Organizer, Stainless Steel Mug. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Eco Desk Hydroponic Planter",
+      "Desk Organizer",
+      "Stainless Steel Mug"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be877d5510bbd4e25d6",
+    "code": "SG 534",
+    "set_type": "4in1",
+    "items": "Note Book, Key, Chain,Card, Holder &Pen",
+    "sg_price": 450,
+    "moq": 50,
+    "image": "SG_534.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:00.387012+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 534)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be877d5510bbd4e25d7",
+    "code": "SG 535",
+    "set_type": "4in1",
+    "items": "Note Book, Key, Chain,Card, Holder &Pen",
+    "sg_price": 450,
+    "moq": 50,
+    "image": "SG_535.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:00.850788+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 535)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be977d5510bbd4e25d8",
+    "code": "SG 533",
+    "set_type": "4in1",
+    "items": "Note Book, Key, Chain,Card, Holder &Pen",
+    "sg_price": 450,
+    "moq": 50,
+    "image": "SG_533.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:01.313598+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 533)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6be977d5510bbd4e25d9",
+    "code": "SG 532",
+    "set_type": "4in1",
+    "items": "Note Book, Key, Chain,Card, Holder &Pen",
+    "sg_price": 430,
+    "moq": 50,
+    "image": "SG_532.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:01.776877+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 532)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bea77d5510bbd4e25da",
+    "code": "SG 528",
+    "set_type": "3in1",
+    "items": "Note Book,Key, Chain &Pen",
+    "sg_price": 425,
+    "moq": 100,
+    "image": "SG_528.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:02.240364+00:00",
+    "name": "Essential Corporate Journal, Pen & Keychain Trio (SG 528)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "Under \u20b9500",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bea77d5510bbd4e25db",
+    "code": "SG 529",
+    "set_type": "4in1",
+    "items": "Note Book,Key, Chain, Card Holder &Pen",
+    "sg_price": 495,
+    "moq": 100,
+    "image": "SG_529.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:02.703125+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 529)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6beb77d5510bbd4e25dc",
+    "code": "SG 530",
+    "set_type": "4in1",
+    "items": "Note Book, Key Chain, Card Holder &Pen",
+    "sg_price": 550,
+    "moq": 100,
+    "image": "SG_530.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:03.165874+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 530)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6beb77d5510bbd4e25dd",
+    "code": "SG 531",
+    "set_type": "4in1",
+    "items": "Note Book, Key Chain, Card Holder &Pen",
+    "sg_price": 505,
+    "moq": 100,
+    "image": "SG_531.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:03.630216+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 531)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Journals & Stationery",
+    "category_slug": "stationery",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Branded Metal Keychain, Metal Visiting Card Case, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Branded Metal Keychain",
+      "Metal Visiting Card Case",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bec77d5510bbd4e25de",
+    "code": "SG 505",
+    "set_type": "6in1",
+    "items": "Note Book,Mug,Pen,Flask, Desk Cube , Key Chain",
+    "sg_price": 1500,
+    "moq": 50,
+    "image": "SG_505.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:04.093910+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (6-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Perpetual Calendar Desk Cube",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Signature Metal Pen, Stainless Steel Insulated Flask, Perpetual Calendar Desk Cube, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Perpetual Calendar Desk Cube",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bec77d5510bbd4e25df",
+    "code": "SG 506",
+    "set_type": "7in1",
+    "items": "Note Book,Mug,Pen,Flask, Calendar, Key Chain,Pen, Holder",
+    "sg_price": 1650,
+    "moq": 50,
+    "image": "SG_506.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:04.557629+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (7-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Perpetual Metal Desk Calendar",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "7-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 7-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Signature Metal Pen, Stainless Steel Insulated Flask, Perpetual Metal Desk Calendar, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Perpetual Metal Desk Calendar",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bed77d5510bbd4e25e0",
+    "code": "SG 507",
+    "set_type": "4in1",
+    "items": "Note Book,Tumbler, Card Holder, Clock",
+    "sg_price": 1450,
+    "moq": 50,
+    "image": "SG_507.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:05.021460+00:00",
+    "name": "Executive 4-in-1 Desk & Card Case Collection (SG 507)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Vacuum Insulated Coffee Tumbler",
+      "Metal Visiting Card Case",
+      "Minimalist Desk Clock"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Vacuum Insulated Coffee Tumbler, Metal Visiting Card Case, Minimalist Desk Clock. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Vacuum Insulated Coffee Tumbler",
+      "Metal Visiting Card Case",
+      "Minimalist Desk Clock"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bed77d5510bbd4e25e1",
+    "code": "SG 510",
+    "set_type": "6in1",
+    "items": "Note Book,Mug,Pen,Bottle, Card Holder, Key Chain",
+    "sg_price": 1125,
+    "moq": 50,
+    "image": "SG_510.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:05.484991+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (6-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Water Bottle",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Signature Metal Pen, Stainless Steel Water Bottle, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Water Bottle",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bed77d5510bbd4e25e2",
+    "code": "SG 509",
+    "set_type": "6in1",
+    "items": "Note Book,Mug,Pen,Flask, Card Holder, Key Chain",
+    "sg_price": 1250,
+    "moq": 50,
+    "image": "SG_509.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:05.948313+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (6-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Signature Metal Pen, Stainless Steel Insulated Flask, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bee77d5510bbd4e25e3",
+    "code": "SG 508",
+    "set_type": "5in1",
+    "items": "Note Book,Mug,Pen,Bottle, Pen ,Power Bank(10,000 MAH)",
+    "sg_price": 1625,
+    "moq": 50,
+    "image": "SG_508.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:06.413242+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (5-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Water Bottle",
+      "10,000mAh Fast Power Bank"
+    ],
+    "set_type_display": "5-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 5-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Signature Metal Pen, Stainless Steel Water Bottle, 10,000mAh Fast Power Bank. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Water Bottle",
+      "10,000mAh Fast Power Bank"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bee77d5510bbd4e25e4",
+    "code": "SG 511",
+    "set_type": "3in1",
+    "items": "Note Book,Pen,Flask",
+    "sg_price": 550,
+    "moq": 50,
+    "image": "SG_511.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:06.876363+00:00",
+    "name": "3-IN-1 Executive Hardcover Journal & Signature Metal Pen Set (SG 511)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Stainless Steel Insulated Flask. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bef77d5510bbd4e25e5",
+    "code": "SG 512",
+    "set_type": "4in1",
+    "items": "Power Bank, Digital Clock, Wireless Mouse, Pen Drive",
+    "sg_price": 1875,
+    "moq": 50,
+    "image": "SG_512.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:07.340081+00:00",
+    "name": "Digital Chrono & Wireless Office Suite (4-IN-1)",
+    "clean_items": [
+      "Fast-Charging Power Bank",
+      "Digital Desk Clock & Thermometer",
+      "Wireless Optical Mouse",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Fast-Charging Power Bank, Digital Desk Clock & Thermometer, Wireless Optical Mouse, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Fast-Charging Power Bank",
+      "Digital Desk Clock & Thermometer",
+      "Wireless Optical Mouse",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bef77d5510bbd4e25e6",
+    "code": "SG 513",
+    "set_type": "3in1",
+    "items": "Note Book,Mug,Pen",
+    "sg_price": 650,
+    "moq": 50,
+    "image": "SG_513.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:07.802952+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (3-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bf077d5510bbd4e25e7",
+    "code": "SG 514",
+    "set_type": "5in1",
+    "items": "Note Book,Mug,Pen,Flask, Card Holder, Key Chain",
+    "sg_price": 1150,
+    "moq": 50,
+    "image": "SG_514.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:08.265860+00:00",
+    "name": "Corporate Drinkware & Journal Ensemble (5-IN-1)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "5-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 5-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Coffee Mug, Signature Metal Pen, Stainless Steel Insulated Flask, Metal Visiting Card Case, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Coffee Mug",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Metal Visiting Card Case",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bf077d5510bbd4e25e8",
+    "code": "SG 517",
+    "set_type": "3in1",
+    "items": "Note Book,Tumbler,Pen",
+    "sg_price": 575,
+    "moq": 50,
+    "image": "SG_517.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:08.743727+00:00",
+    "name": "3-IN-1 Executive Hardcover Journal & Vacuum Insulated Coffee Tumbler Set (SG 517)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Vacuum Insulated Coffee Tumbler",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Vacuum Insulated Coffee Tumbler, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Vacuum Insulated Coffee Tumbler",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bf177d5510bbd4e25e9",
+    "code": "SG 518",
+    "set_type": "4in1",
+    "items": "Note Book,Pen,Flask, Key Chain",
+    "sg_price": 600,
+    "moq": 50,
+    "image": "SG_518.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:09.206621+00:00",
+    "name": "4-IN-1 Executive Hardcover Journal & Signature Metal Pen Set (SG 518)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "4-IN-1",
+    "category": "Executive Gift Hampers",
+    "category_slug": "executive-hampers",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 4-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Stainless Steel Insulated Flask, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bf177d5510bbd4e25ea",
+    "code": "SG 516",
+    "set_type": "3in1",
+    "items": "Note Book,Pen,Bottle",
+    "sg_price": 475,
+    "moq": 50,
+    "image": "SG_516.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:09.669940+00:00",
+    "name": "3-IN-1 Executive Hardcover Journal & Signature Metal Pen Set (SG 516)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Water Bottle"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Stainless Steel Water Bottle. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Water Bottle"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bf277d5510bbd4e25eb",
+    "code": "SG 515",
+    "set_type": "3in1",
+    "items": "Note Book,Pen,Flask",
+    "sg_price": 645,
+    "moq": 50,
+    "image": "SG_515.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:10.132758+00:00",
+    "name": "3-IN-1 Executive Hardcover Journal & Signature Metal Pen Set (SG 515)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b9500 - \u20b91,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Stainless Steel Insulated Flask. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bf277d5510bbd4e25ec",
+    "code": "SG 519",
+    "set_type": "6in1",
+    "items": "Note Book,Pen,Flask, Pen Drive,Power, Bank 10000MAH, Key Chain",
+    "sg_price": 2650,
+    "moq": 50,
+    "image": "SG_519.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:10.596277+00:00",
+    "name": "6-IN-1 Executive Hardcover Journal & Signature Metal Pen Set (SG 519)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "10,000mAh Fast Power Bank",
+      "Branded Metal Keychain"
+    ],
+    "set_type_display": "6-IN-1",
+    "category": "Tech & Gadgets",
+    "category_slug": "tech-gadgets",
+    "budget_tier": "Above \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Diwali & Festive",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 6-IN-1 corporate gift package combining Executive Hardcover Journal, Signature Metal Pen, Stainless Steel Insulated Flask, 10,000mAh Fast Power Bank, Branded Metal Keychain. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Signature Metal Pen",
+      "Stainless Steel Insulated Flask",
+      "10,000mAh Fast Power Bank",
+      "Branded Metal Keychain"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  },
+  {
+    "_id": "6a7d6bf377d5510bbd4e25ed",
+    "code": "SG 520",
+    "set_type": "3in1",
+    "items": "Note Book,Bottle,Pen",
+    "sg_price": 1200,
+    "moq": 50,
+    "image": "SG_520.jpg",
+    "override_price": null,
+    "visible": true,
+    "created_at": "2026-08-13T07:02:11.059630+00:00",
+    "name": "3-IN-1 Executive Hardcover Journal & Stainless Steel Water Bottle Set (SG 520)",
+    "clean_items": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Water Bottle",
+      "Signature Metal Pen"
+    ],
+    "set_type_display": "3-IN-1",
+    "category": "Drinkware & Travel",
+    "category_slug": "drinkware-travel",
+    "budget_tier": "\u20b91,000 - \u20b92,000",
+    "occasions": [
+      "Employee Onboarding",
+      "Corporate Gifting",
+      "Executive & Leadership",
+      "Conferences & Events"
+    ],
+    "description": "A meticulously curated 3-IN-1 corporate gift package combining Executive Hardcover Journal, Stainless Steel Water Bottle, Signature Metal Pen. Crafted specifically for professional gifting, each piece is housed in a bespoke matte presentation box with high-density precision foam lining. Custom corporate logo branding available on all items.",
+    "inclusions": [
+      "Executive Hardcover Journal",
+      "Stainless Steel Water Bottle",
+      "Signature Metal Pen"
+    ],
+    "branding_options": "Laser Engraving, UV Screen Printing, Custom Foil Debossing",
+    "packaging_type": "Premium Matte Gift Box with Precision Protective Foam Cutouts",
+    "indicative_delivery": "7-12 business days following artwork and sample approval",
+    "price_disclaimer": "Prices are exclusive of 18% GST and standard shipping. Custom logo branding included on minimum order quantity (MOQ)."
+  }
+]

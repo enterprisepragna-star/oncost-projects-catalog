@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /catalog
+Allow: /about
+Allow: /contact
+Disallow: /admin/
+Disallow: /partner/
+Disallow: /reset-password
+Disallow: /forgot-password
+
+Sitemap: https://www.oncostcatalog.in/sitemap.xml
