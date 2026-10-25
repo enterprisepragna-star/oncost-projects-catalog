@@ -14,7 +14,8 @@
       "use": "@vercel/python",
       "config": {
         "includeFiles": [
-          "data/product_images/**"
+          "data/**",
+          "backend/data/**"
         ]
       }
     }

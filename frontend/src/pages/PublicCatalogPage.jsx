@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo, useCallback, useRef } from "react";
-import api, { imageUrl, formatINR } from "@/lib/api";
+import api, { API, imageUrl, formatINR } from "@/lib/api";
 import { PUBLIC } from "@/constants/testIds";
 import {
   Search, ArrowUp, ArrowDown, ArrowUpDown, ZoomIn, X,
@@ -30,11 +30,27 @@ const OCCASIONS = [
   "Executive & Leadership",
 ];
 
-/* ---------- Lazy Image with placeholder ---------- */
+/* ---------- Lazy Image with placeholder & resilient API fallback ---------- */
 function LazyImage({ src, alt, className, eager = false, onClick }) {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState(src);
   const imgRef = useRef(null);
+
+  useEffect(() => {
+    setCurrentSrc(src);
+    setLoaded(false);
+    setError(false);
+  }, [src]);
+
+  const handleError = () => {
+    if (currentSrc && currentSrc.startsWith("/images/")) {
+      const cleanPath = currentSrc.split("?")[0].replace(/^\/images\//, "");
+      setCurrentSrc(`${API}/images/${cleanPath}`);
+    } else {
+      setError(true);
+    }
+  };
 
   return (
     <div className="relative w-full h-full bg-zinc-100" onClick={onClick}>
@@ -51,12 +67,12 @@ function LazyImage({ src, alt, className, eager = false, onClick }) {
       )}
       <img
         ref={imgRef}
-        src={src}
+        src={currentSrc}
         alt={alt}
         loading={eager ? "eager" : "lazy"}
         decoding="async"
         onLoad={() => setLoaded(true)}
-        onError={() => setError(true)}
+        onError={handleError}
         className={`${className} transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
       />
     </div>

@@ -1865,6 +1865,7 @@ async def get_sale(sid: str, _user=Depends(get_current_user)):
 
 
 # ---------- Images (public) — object storage first, db second, local fallback ----------
+@app.get("/images/{filename}")
 @api.get("/images/{filename}")
 async def get_image(filename: str):
     # basic safety
@@ -1984,7 +1985,12 @@ async def startup():
 
 @app.on_event("shutdown")
 async def shutdown():
-    client.close()
+    for c in list(_clients.values()):
+        try:
+            c.close()
+        except Exception:
+            pass
+    _clients.clear()
 
 
 app.include_router(api)
