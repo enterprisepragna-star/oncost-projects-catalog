@@ -826,9 +826,22 @@ async def upload_product_image(pid: str, file: UploadFile = File(...), _user=Dep
         put_object(build_storage_path(fname), jpeg_bytes, "image/jpeg")
     except Exception:
         pass
+    # Persist in MongoDB for serverless persistence across redeploys
+    try:
+        await db.images.update_one(
+            {"filename": fname},
+            {"$set": {"filename": fname, "data": jpeg_bytes, "content_type": "image/jpeg", "created_at": iso(now_utc())}},
+            upsert=True
+        )
+    except Exception as e:
+        logger.warning(f"Could not persist image to database: {e}")
     # Always also write a local copy (used as fallback if storage call fails)
     try:
         (IMAGES_DIR / fname).write_bytes(jpeg_bytes)
+    except Exception:
+        pass
+    try:
+        (Path("/tmp") / fname).write_bytes(jpeg_bytes)
     except Exception:
         pass
     await db.products.update_one({"_id": ObjectId(pid)}, {"$set": {"image": fname}})
@@ -1516,7 +1529,19 @@ async def upload_category_image(cid: str, file: UploadFile = File(...), _user=De
     except Exception:
         pass
     try:
+        await db.images.update_one(
+            {"filename": fname},
+            {"$set": {"filename": fname, "data": jbytes, "content_type": "image/jpeg", "created_at": iso(now_utc())}},
+            upsert=True
+        )
+    except Exception as e:
+        logger.warning(f"Could not persist category image to database: {e}")
+    try:
         (IMAGES_DIR / fname).write_bytes(jbytes)
+    except Exception:
+        pass
+    try:
+        (Path("/tmp") / fname).write_bytes(jbytes)
     except Exception:
         pass
     await db.categories.update_one({"_id": ObjectId(cid)}, {"$set": {"image": fname}})
@@ -1839,7 +1864,7 @@ async def get_sale(sid: str, _user=Depends(get_current_user)):
     return s
 
 
-# ---------- Images (public) — object storage first, local fallback ----------
+# ---------- Images (public) — object storage first, db second, local fallback ----------
 @api.get("/images/{filename}")
 async def get_image(filename: str):
     # basic safety
@@ -1850,12 +1875,34 @@ async def get_image(filename: str):
     if data:
         return Response(content=data, media_type=ctype or "image/jpeg",
                         headers={"Cache-Control": "public, max-age=86400"})
-    # 2) Fallback to local disk (bundled supplier images)
-    fp = IMAGES_DIR / filename
-    if not fp.exists():
-        raise HTTPException(404, "not found")
-    return FileResponse(str(fp), media_type="image/jpeg",
-                        headers={"Cache-Control": "public, max-age=86400"})
+
+    # 2) Try database storage (persisted uploads in MongoDB)
+    try:
+        img_doc = await db.images.find_one({"filename": filename})
+        if img_doc and "data" in img_doc:
+            return Response(content=img_doc["data"], media_type=img_doc.get("content_type", "image/jpeg"),
+                            headers={"Cache-Control": "public, max-age=86400"})
+    except Exception:
+        pass
+
+    # 3) Fallback to local disk (bundled supplier images & frontend public assets)
+    search_paths = [
+        IMAGES_DIR / filename,
+        ROOT_DIR / "data" / "product_images" / filename,
+        ROOT_DIR.parent / "backend" / "data" / "product_images" / filename,
+        ROOT_DIR.parent / "frontend" / "public" / "images" / filename,
+        ROOT_DIR.parent / "frontend" / "build" / "images" / filename,
+        Path("/tmp") / filename,
+    ]
+    for fp in search_paths:
+        try:
+            if fp.exists():
+                return FileResponse(str(fp), media_type="image/jpeg",
+                                    headers={"Cache-Control": "public, max-age=86400"})
+        except Exception:
+            continue
+
+    raise HTTPException(404, "not found")
 
 
 # ---------- Startup: seed admin + products + indexes ----------

@@ -16,7 +16,17 @@ api.interceptors.request.use((cfg) => {
 
 export default api;
 
-export const imageUrl = (filename) => (filename ? `${API}/images/${filename}` : null);
+export const imageUrl = (filename) => {
+  if (!filename) return null;
+  if (filename.startsWith("http://") || filename.startsWith("https://") || filename.startsWith("data:")) {
+    return filename;
+  }
+  // Catalog product images bundled in frontend/public/images/ for high-speed CDN delivery
+  if (filename.startsWith("SG_")) {
+    return `/images/${filename}`;
+  }
+  return `${API}/images/${filename}`;
+};
 
 export const formatINR = (n) => {
   if (n === null || n === undefined || isNaN(n)) return "—";
