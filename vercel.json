@@ -22,16 +22,32 @@
   ],
   "routes": [
     {
-      "src": "/images/(.*)",
-      "dest": "/backend/server.py"
-    },
-    {
       "src": "/api/(.*)",
       "dest": "/backend/server.py"
     },
     {
+      "src": "/images/(.*)",
+      "dest": "/frontend/images/$1"
+    },
+    {
+      "src": "/data/(.*)",
+      "dest": "/frontend/data/$1"
+    },
+    {
       "src": "/static/(.*)",
       "dest": "/frontend/static/$1"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/frontend/favicon.ico"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/frontend/robots.txt"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/frontend/sitemap.xml"
     },
     {
       "src": "/(.*)",

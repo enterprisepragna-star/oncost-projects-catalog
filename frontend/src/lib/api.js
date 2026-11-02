@@ -21,7 +21,8 @@ export const imageUrl = (filename) => {
   if (filename.startsWith("http://") || filename.startsWith("https://") || filename.startsWith("data:")) {
     return filename;
   }
-  return `${API}/images/${filename}`;
+  const clean = filename.replace(/^\/?(api\/)?images\//, "");
+  return `/images/${clean}`;
 };
 
 export const formatINR = (n) => {

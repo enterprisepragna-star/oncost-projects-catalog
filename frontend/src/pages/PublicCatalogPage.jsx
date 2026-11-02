@@ -12,6 +12,7 @@ import ImageLightbox from "@/components/ImageLightbox";
 import { useShortlist, ShortlistProvider } from "@/lib/shortlistContext";
 import ShortlistDrawer from "@/components/ShortlistDrawer";
 import EnquiryModal from "@/components/EnquiryModal";
+import { BUNDLED_PRODUCTS, BUNDLED_CATEGORIES } from "@/data/catalogData";
 
 const ITEMS_PER_PAGE = 12;
 
@@ -217,9 +218,9 @@ function ProductCard({ product, index, onZoom, onQuote }) {
 
 /* ---------- Main Page ---------- */
 function CatalogPageInner() {
-  const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState(BUNDLED_PRODUCTS);
+  const [categories, setCategories] = useState(BUNDLED_CATEGORIES);
+  const [loading, setLoading] = useState(false);
   const [q, setQ] = useState("");
   const [sort, setSort] = useState("code");
   const [zoom, setZoom] = useState(null);
@@ -249,55 +250,26 @@ function CatalogPageInner() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    setLoading(true);
-    Promise.all([
-      api.get("/public/products").catch(async () => {
-        // Fallback to static bundled products if API fails (e.g. preview deployment protection or network issue)
-        try {
-          const res = await fetch("/data/products.json");
-          if (res.ok) {
-            const data = await res.json();
-            return { data };
-          }
-        } catch (e) {
-          console.error("Static products fallback failed:", e);
+    // Attempt live fetch from API to get any dynamically added products/prices; fallback is already loaded in state
+    api.get("/public/products")
+      .then((res) => {
+        if (Array.isArray(res?.data) && res.data.length > 0) {
+          setProducts(res.data);
         }
-        return { data: [] };
-      }),
-      api.get("/public/categories").catch(async () => {
-        try {
-          const res = await fetch("/data/categories.json");
-          if (res.ok) {
-            const data = await res.json();
-            return { data };
-          }
-        } catch (e) {
-          console.error("Static categories fallback failed:", e);
-        }
-        return { data: [] };
-      }),
-    ])
-      .then(async ([prodRes, catRes]) => {
-        let prods = Array.isArray(prodRes?.data) ? prodRes.data : [];
-        let cats = Array.isArray(catRes?.data) ? catRes.data : [];
-
-        // If API returned empty array (e.g. unseeded environment or auth redirect), fall back to bundled data
-        if (prods.length === 0) {
-          try {
-            const res = await fetch("/data/products.json");
-            if (res.ok) {
-              prods = await res.json();
-            }
-          } catch (e) {
-            console.error("Secondary fallback failed:", e);
-          }
-        }
-
-        setProducts(prods);
-        setCategories(cats);
       })
-      .catch(console.error)
-      .finally(() => setLoading(false));
+      .catch((err) => {
+        console.warn("Live products API unavailable, using bundled catalog:", err?.message);
+      });
+
+    api.get("/public/categories")
+      .then((res) => {
+        if (Array.isArray(res?.data) && res.data.length > 0) {
+          setCategories(res.data);
+        }
+      })
+      .catch((err) => {
+        console.warn("Live categories API unavailable, using bundled categories:", err?.message);
+      });
 
     // Preserve referral tag
     try {

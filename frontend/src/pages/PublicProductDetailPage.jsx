@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import api, { imageUrl, formatINR } from "@/lib/api";
+import api, { API, imageUrl, formatINR } from "@/lib/api";
 import {
   ArrowLeft, MessageSquare, Heart, ShieldCheck, Truck, Sparkles,
   Package, ZoomIn, CheckCircle2, ChevronRight, Share2, AlertCircle, Loader2, Phone, Mail
@@ -9,13 +9,21 @@ import ImageLightbox from "@/components/ImageLightbox";
 import EnquiryModal from "@/components/EnquiryModal";
 import ShortlistDrawer from "@/components/ShortlistDrawer";
 import { useShortlist, ShortlistProvider } from "@/lib/shortlistContext";
+import { BUNDLED_PRODUCTS } from "@/data/catalogData";
 
 function ProductDetailInner() {
   const { code } = useParams();
   const navigate = useNavigate();
-  const [product, setProduct] = useState(null);
-  const [related, setRelated] = useState([]);
-  const [loading, setLoading] = useState(true);
+
+  const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const initialProduct = BUNDLED_PRODUCTS.find((p) => norm(p.code) === norm(code) || norm(p.name) === norm(code) || p.id === code) || null;
+  const initialRelated = initialProduct
+    ? BUNDLED_PRODUCTS.filter((p) => p.code !== initialProduct.code && (p.category === initialProduct.category || p.budget_tier === initialProduct.budget_tier)).slice(0, 4)
+    : [];
+
+  const [product, setProduct] = useState(initialProduct);
+  const [related, setRelated] = useState(initialRelated);
+  const [loading, setLoading] = useState(!initialProduct);
   const [error, setError] = useState(null);
   const [zoom, setZoom] = useState(null);
   const [quoteOpen, setQuoteOpen] = useState(false);
@@ -26,81 +34,57 @@ function ProductDetailInner() {
 
   useEffect(() => {
     if (!code) return;
-    setLoading(true);
+
+    // If we already have the bundled product in state, set page title immediately
+    if (initialProduct) {
+      setProduct(initialProduct);
+      setRelated(initialRelated);
+      setLoading(false);
+      document.title = `${initialProduct.name || initialProduct.code} | ONCOST Corporate Gifting`;
+    } else {
+      setLoading(true);
+    }
     setError(null);
 
-    // Fetch product detail and all products for related items
+    // Fetch live product detail and list in background
     Promise.all([
-      api.get(`/public/products/${encodeURIComponent(code)}`).catch(async () => {
-        try {
-          const res = await fetch("/data/products.json");
-          if (res.ok) {
-            const list = await res.json();
-            const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-            const found = list.find((p) => norm(p.code) === norm(code) || norm(p.name) === norm(code) || p.id === code);
-            if (found) return { data: found };
-          }
-        } catch (e) {
-          console.error("Product detail fallback error:", e);
-        }
-        return { data: null };
-      }),
-      api.get("/public/products").catch(async () => {
-        try {
-          const res = await fetch("/data/products.json");
-          if (res.ok) {
-            return { data: await res.json() };
-          }
-        } catch (e) {
-          console.error("Products list fallback error:", e);
-        }
-        return { data: [] };
-      })
+      api.get(`/public/products/${encodeURIComponent(code)}`).catch(() => ({ data: null })),
+      api.get("/public/products").catch(() => ({ data: [] }))
     ])
-      .then(async ([detailRes, allRes]) => {
+      .then(([detailRes, allRes]) => {
         let pData = detailRes?.data;
-        let allList = Array.isArray(allRes?.data) ? allRes.data : [];
-
-        if (!pData || allList.length === 0) {
-          try {
-            const res = await fetch("/data/products.json");
-            if (res.ok) {
-              const list = await res.json();
-              if (allList.length === 0) allList = list;
-              if (!pData) {
-                const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-                pData = list.find((p) => norm(p.code) === norm(code) || norm(p.name) === norm(code) || p.id === code);
-              }
-            }
-          } catch (e) {
-            console.error("Secondary fallback error:", e);
-          }
-        }
+        let allList = Array.isArray(allRes?.data) && allRes.data.length > 0 ? allRes.data : BUNDLED_PRODUCTS;
 
         if (!pData) {
+          pData = allList.find((p) => norm(p.code) === norm(code) || norm(p.name) === norm(code) || p.id === code);
+        }
+
+        if (!pData && !initialProduct) {
           setError("Product not found or currently unavailable.");
           return;
         }
 
-        setProduct(pData);
-        const rel = allList
-          .filter(
-            (p) =>
-              p.code !== pData.code &&
-              (p.category === pData.category || p.budget_tier === pData.budget_tier)
-          )
-          .slice(0, 4);
-        setRelated(rel);
-        
-        // Update document title for SEO
-        document.title = `${pData.name || pData.code} | ONCOST Corporate Gifting`;
+        if (pData) {
+          setProduct(pData);
+          const rel = allList
+            .filter(
+              (p) =>
+                p.code !== pData.code &&
+                (p.category === pData.category || p.budget_tier === pData.budget_tier)
+            )
+            .slice(0, 4);
+          setRelated(rel);
+          document.title = `${pData.name || pData.code} | ONCOST Corporate Gifting`;
+        }
       })
       .catch((err) => {
-        console.error("Failed to fetch product:", err);
-        setError("Product not found or currently unavailable.");
+        console.warn("Failed to fetch live product detail:", err?.message);
+        if (!initialProduct) {
+          setError("Product not found or currently unavailable.");
+        }
       })
       .finally(() => setLoading(false));
-  }, [code]);
+  }, [code]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleShare = () => {
     if (navigator.share) {
@@ -289,9 +273,13 @@ function ProductDetailInner() {
                   src={imageUrl(product.image)}
                   alt={product.name || product.code}
                   onError={(e) => {
-                    if (e.target.src && e.target.src.includes("/api/images/")) {
-                      const clean = e.target.src.split("/api/images/")[1]?.split("?")[0];
-                      e.target.src = `/images/${clean}`;
+                    const current = e.target.src || "";
+                    if (current.includes("/api/images/")) {
+                      const clean = current.split("/api/images/")[1]?.split("?")[0];
+                      if (clean) e.target.src = `/images/${clean}`;
+                    } else if (current.includes("/images/")) {
+                      const clean = current.split("/images/")[1]?.split("?")[0];
+                      if (clean) e.target.src = `${API}/images/${clean}`;
                     }
                   }}
                   className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-500"
@@ -509,6 +497,16 @@ function ProductDetailInner() {
                     <img
                       src={imageUrl(rel.image)}
                       alt={rel.name || rel.code}
+                      onError={(e) => {
+                        const current = e.target.src || "";
+                        if (current.includes("/api/images/")) {
+                          const clean = current.split("/api/images/")[1]?.split("?")[0];
+                          if (clean) e.target.src = `/images/${clean}`;
+                        } else if (current.includes("/images/")) {
+                          const clean = current.split("/images/")[1]?.split("?")[0];
+                          if (clean) e.target.src = `${API}/images/${clean}`;
+                        }
+                      }}
                       className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform"
                     />
                   </div>

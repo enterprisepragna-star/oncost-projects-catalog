@@ -53,12 +53,12 @@ except Exception:
     pass
 
 # ---------- Config ----------
-MONGO_URL = os.environ["MONGO_URL"].strip('"\'')
-DB_NAME = os.environ["DB_NAME"]
-JWT_SECRET = os.environ["JWT_SECRET"]
+MONGO_URL = os.environ.get("MONGO_URL", "").strip('"\'')
+DB_NAME = os.environ.get("DB_NAME", "oncost")
+JWT_SECRET = os.environ.get("JWT_SECRET", "default-preview-secret-key-change-me")
 JWT_ALGO = "HS256"
-ADMIN_EMAIL = os.environ["ADMIN_EMAIL"].lower()
-ADMIN_PASSWORD = os.environ["ADMIN_PASSWORD"]
+ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL", "admin@oncostcatalog.in").lower()
+ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "admin123")
 
 # Company letterhead (configurable via env, with sensible defaults for ONCOST)
 COMPANY_LEGAL_NAME = os.environ.get("COMPANY_LEGAL_NAME", "PRAGNA ENTERPRISES")
@@ -619,7 +619,29 @@ async def get_products(_user=Depends(get_current_user)):
 
 @api.get("/public/products")
 async def public_products():
-    items = await _list_products(visible_only=True)
+    items = []
+    try:
+        items = await _list_products(visible_only=True)
+    except Exception as e:
+        logger.warning(f"Error fetching products from db: {e}")
+
+    if not items:
+        # Fallback to local products_enriched.json or products.json
+        fallback_files = [
+            DATA_DIR / "products_enriched.json",
+            ROOT_DIR.parent / "frontend" / "public" / "data" / "products.json",
+            PRODUCTS_JSON,
+        ]
+        for fb in fallback_files:
+            if fb.exists():
+                try:
+                    loaded = json.loads(fb.read_text())
+                    if loaded and isinstance(loaded, list):
+                        items = loaded
+                        break
+                except Exception:
+                    pass
+
     # Strip sg_price from public view
     for it in items:
         it.pop("sg_price", None)
@@ -1441,11 +1463,22 @@ async def list_categories(_user=Depends(get_current_user)):
 
 @api.get("/public/categories")
 async def public_categories():
-    cur = db.categories.find({"visible": {"$ne": False}}).sort("name", 1)
     out = []
-    for c in await cur.to_list(length=500):
-        c["id"] = str(c.pop("_id"))
-        out.append(c)
+    try:
+        cur = db.categories.find({"visible": {"$ne": False}}).sort("name", 1)
+        for c in await cur.to_list(length=500):
+            c["id"] = str(c.pop("_id"))
+            out.append(c)
+    except Exception as e:
+        logger.warning(f"Error fetching categories from db: {e}")
+
+    if not out:
+        cats_file = ROOT_DIR.parent / "frontend" / "public" / "data" / "categories.json"
+        if cats_file.exists():
+            try:
+                out = json.loads(cats_file.read_text())
+            except Exception:
+                pass
     return out
 
 
@@ -1864,32 +1897,19 @@ async def get_sale(sid: str, _user=Depends(get_current_user)):
     return s
 
 
-# ---------- Images (public) — object storage first, db second, local fallback ----------
+# ---------- Images (public) — local disk first, object storage second, db third ----------
 @app.get("/images/{filename}")
 @api.get("/images/{filename}")
 async def get_image(filename: str):
     # basic safety
     if "/" in filename or ".." in filename:
         raise HTTPException(400, "bad name")
-    # 1) Try persistent object storage
-    data, ctype = get_object(build_storage_path(filename))
-    if data:
-        return Response(content=data, media_type=ctype or "image/jpeg",
-                        headers={"Cache-Control": "public, max-age=86400"})
 
-    # 2) Try database storage (persisted uploads in MongoDB)
-    try:
-        img_doc = await db.images.find_one({"filename": filename})
-        if img_doc and "data" in img_doc:
-            return Response(content=img_doc["data"], media_type=img_doc.get("content_type", "image/jpeg"),
-                            headers={"Cache-Control": "public, max-age=86400"})
-    except Exception:
-        pass
-
-    # 3) Fallback to local disk (bundled supplier images & frontend public assets)
+    # 1) Try local disk (bundled supplier images & frontend public assets)
     search_paths = [
         IMAGES_DIR / filename,
         ROOT_DIR / "data" / "product_images" / filename,
+        ROOT_DIR / "product_images" / filename,
         ROOT_DIR.parent / "backend" / "data" / "product_images" / filename,
         ROOT_DIR.parent / "frontend" / "public" / "images" / filename,
         ROOT_DIR.parent / "frontend" / "build" / "images" / filename,
@@ -1903,84 +1923,112 @@ async def get_image(filename: str):
         except Exception:
             continue
 
+    # 2) Try persistent object storage
+    try:
+        data, ctype = get_object(build_storage_path(filename))
+        if data:
+            return Response(content=data, media_type=ctype or "image/jpeg",
+                            headers={"Cache-Control": "public, max-age=86400"})
+    except Exception:
+        pass
+
+    # 3) Try database storage (persisted uploads in MongoDB)
+    try:
+        img_doc = await db.images.find_one({"filename": filename})
+        if img_doc and "data" in img_doc:
+            return Response(content=img_doc["data"], media_type=img_doc.get("content_type", "image/jpeg"),
+                            headers={"Cache-Control": "public, max-age=86400"})
+    except Exception:
+        pass
+
     raise HTTPException(404, "not found")
 
 
 # ---------- Startup: seed admin + products + indexes ----------
 @app.on_event("startup")
 async def startup():
-    # Initialize persistent object storage (Emergent)
-    init_storage()
+    try:
+        # Initialize persistent object storage (Emergent)
+        init_storage()
+    except Exception as e:
+        logger.warning(f"Storage init skipped: {e}")
 
-    # Indexes
-    await db.users.create_index("email", unique=True)
-    await db.quotations.create_index("share_token", unique=True)
-    await db.products.create_index("code", unique=True)
-    await db.categories.create_index("name", unique=True)
-    await db.password_resets.create_index("token", unique=True)
-    # TTL index: Mongo deletes the doc automatically once expires_at passes.
-    await db.password_resets.create_index("expires_at", expireAfterSeconds=0)
+    if not MONGO_URL:
+        logger.warning("MONGO_URL not configured, running in stateless fallback mode")
+        return
 
-    # Seed admin
-    existing = await db.users.find_one({"email": ADMIN_EMAIL})
-    if not existing:
-        await db.users.insert_one({
-            "email": ADMIN_EMAIL,
-            "password_hash": hash_password(ADMIN_PASSWORD),
-            "name": "ONCOST Admin",
-            "role": "admin",
-            "created_at": iso(now_utc()),
-        })
-        logger.info(f"Admin user seeded: {ADMIN_EMAIL}")
-    elif not verify_password(ADMIN_PASSWORD, existing["password_hash"]):
-        await db.users.update_one(
-            {"email": ADMIN_EMAIL},
-            {"$set": {"password_hash": hash_password(ADMIN_PASSWORD)}},
-        )
-        logger.info("Admin password updated from env")
-    # Backfill role for any legacy admin user missing it
-    await db.users.update_many({"role": {"$exists": False}}, {"$set": {"role": "admin"}})
+    try:
+        # Indexes
+        await db.users.create_index("email", unique=True)
+        await db.quotations.create_index("share_token", unique=True)
+        await db.products.create_index("code", unique=True)
+        await db.categories.create_index("name", unique=True)
+        await db.password_resets.create_index("token", unique=True)
+        # TTL index: Mongo deletes the doc automatically once expires_at passes.
+        await db.password_resets.create_index("expires_at", expireAfterSeconds=0)
 
-    # OPMS indexes
-    await opms_ensure_indexes(db)
-    await commissions_ensure_indexes(db)
+        # Seed admin
+        existing = await db.users.find_one({"email": ADMIN_EMAIL})
+        if not existing:
+            await db.users.insert_one({
+                "email": ADMIN_EMAIL,
+                "password_hash": hash_password(ADMIN_PASSWORD),
+                "name": "ONCOST Admin",
+                "role": "admin",
+                "created_at": iso(now_utc()),
+            })
+            logger.info(f"Admin user seeded: {ADMIN_EMAIL}")
+        elif not verify_password(ADMIN_PASSWORD, existing["password_hash"]):
+            await db.users.update_one(
+                {"email": ADMIN_EMAIL},
+                {"$set": {"password_hash": hash_password(ADMIN_PASSWORD)}},
+            )
+            logger.info("Admin password updated from env")
+        # Backfill role for any legacy admin user missing it
+        await db.users.update_many({"role": {"$exists": False}}, {"$set": {"role": "admin"}})
 
-    # Seed pricing rule
-    if not await db.pricing_rule.find_one({"_id": "default"}):
-        await db.pricing_rule.insert_one({
-            "_id": "default",
-            "threshold": 1000,
-            "below_increment": 50,
-            "at_or_above_increment": 100,
-            "rounding": 1,
-        })
+        # OPMS indexes
+        await opms_ensure_indexes(db)
+        await commissions_ensure_indexes(db)
 
-    # Seed / upsert products from products.json — add new codes without disturbing existing ones
-    if PRODUCTS_JSON.exists():
-        items = json.loads(PRODUCTS_JSON.read_text())
-        
-        # Fetch existing codes in one query
-        existing_docs = await db.products.find({}, {"code": 1}).to_list(length=None)
-        existing_codes = {doc["code"] for doc in existing_docs}
-        
-        docs_to_insert = []
-        for it in items:
-            if it["code"] not in existing_codes:
-                docs_to_insert.append({
-                    "code": it["code"],
-                    "set_type": it.get("set_type", ""),
-                    "items": it.get("items", ""),
-                    "sg_price": int(it.get("sg_price", 0)),
-                    "moq": int(it.get("moq", 50)),
-                    "image": it.get("image"),
-                    "override_price": None,
-                    "visible": True,
-                    "created_at": iso(now_utc()),
-                })
-        
-        if docs_to_insert:
-            await db.products.insert_many(docs_to_insert)
-            logger.info(f"Seeded {len(docs_to_insert)} new products from products.json")
+        # Seed pricing rule
+        if not await db.pricing_rule.find_one({"_id": "default"}):
+            await db.pricing_rule.insert_one({
+                "_id": "default",
+                "threshold": 1000,
+                "below_increment": 50,
+                "at_or_above_increment": 100,
+                "rounding": 1,
+            })
+
+        # Seed / upsert products from products.json — add new codes without disturbing existing ones
+        if PRODUCTS_JSON.exists():
+            items = json.loads(PRODUCTS_JSON.read_text())
+            
+            # Fetch existing codes in one query
+            existing_docs = await db.products.find({}, {"code": 1}).to_list(length=None)
+            existing_codes = {doc["code"] for doc in existing_docs}
+            
+            docs_to_insert = []
+            for it in items:
+                if it["code"] not in existing_codes:
+                    docs_to_insert.append({
+                        "code": it["code"],
+                        "set_type": it.get("set_type", ""),
+                        "items": it.get("items", ""),
+                        "sg_price": int(it.get("sg_price", 0)),
+                        "moq": int(it.get("moq", 50)),
+                        "image": it.get("image"),
+                        "override_price": None,
+                        "visible": True,
+                        "created_at": iso(now_utc()),
+                    })
+            
+            if docs_to_insert:
+                await db.products.insert_many(docs_to_insert)
+                logger.info(f"Seeded {len(docs_to_insert)} new products from products.json")
+    except Exception as e:
+        logger.error(f"Startup DB initialization error (continuing): {e}")
 
 
 @app.on_event("shutdown")
