@@ -23,7 +23,7 @@
   "routes": [
     {
       "src": "/images/(.*)",
-      "dest": "/frontend/images/$1"
+      "dest": "/backend/server.py"
     },
     {
       "src": "/api/(.*)",

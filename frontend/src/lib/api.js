@@ -21,11 +21,6 @@ export const imageUrl = (filename) => {
   if (filename.startsWith("http://") || filename.startsWith("https://") || filename.startsWith("data:")) {
     return filename;
   }
-  // Bundled catalog supplier images (e.g. SG_501.jpg) served from CDN static path
-  if (/^SG_\d+\.(jpg|jpeg|png|webp)$/i.test(filename)) {
-    return `/images/${filename}`;
-  }
-  // Dynamic uploads (with random hash tokens or category prefixes) served from backend API / DB
   return `${API}/images/${filename}`;
 };
 
