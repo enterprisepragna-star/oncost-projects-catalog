@@ -44,7 +44,10 @@ function LazyImage({ src, alt, className, eager = false, onClick }) {
   }, [src]);
 
   const handleError = () => {
-    if (currentSrc && currentSrc.startsWith("/images/")) {
+    if (currentSrc && currentSrc.includes("/api/images/")) {
+      const filename = currentSrc.split("/api/images/")[1]?.split("?")[0];
+      setCurrentSrc(`/images/${filename}`);
+    } else if (currentSrc && currentSrc.startsWith("/images/")) {
       const cleanPath = currentSrc.split("?")[0].replace(/^\/images\//, "");
       setCurrentSrc(`${API}/images/${cleanPath}`);
     } else {
@@ -248,12 +251,50 @@ function CatalogPageInner() {
   useEffect(() => {
     setLoading(true);
     Promise.all([
-      api.get("/public/products"),
-      api.get("/public/categories"),
+      api.get("/public/products").catch(async () => {
+        // Fallback to static bundled products if API fails (e.g. preview deployment protection or network issue)
+        try {
+          const res = await fetch("/data/products.json");
+          if (res.ok) {
+            const data = await res.json();
+            return { data };
+          }
+        } catch (e) {
+          console.error("Static products fallback failed:", e);
+        }
+        return { data: [] };
+      }),
+      api.get("/public/categories").catch(async () => {
+        try {
+          const res = await fetch("/data/categories.json");
+          if (res.ok) {
+            const data = await res.json();
+            return { data };
+          }
+        } catch (e) {
+          console.error("Static categories fallback failed:", e);
+        }
+        return { data: [] };
+      }),
     ])
-      .then(([prodRes, catRes]) => {
-        setProducts(prodRes.data);
-        setCategories(catRes.data);
+      .then(async ([prodRes, catRes]) => {
+        let prods = Array.isArray(prodRes?.data) ? prodRes.data : [];
+        let cats = Array.isArray(catRes?.data) ? catRes.data : [];
+
+        // If API returned empty array (e.g. unseeded environment or auth redirect), fall back to bundled data
+        if (prods.length === 0) {
+          try {
+            const res = await fetch("/data/products.json");
+            if (res.ok) {
+              prods = await res.json();
+            }
+          } catch (e) {
+            console.error("Secondary fallback failed:", e);
+          }
+        }
+
+        setProducts(prods);
+        setCategories(cats);
       })
       .catch(console.error)
       .finally(() => setLoading(false));

@@ -31,22 +31,69 @@ function ProductDetailInner() {
 
     // Fetch product detail and all products for related items
     Promise.all([
-      api.get(`/public/products/${encodeURIComponent(code)}`),
-      api.get("/public/products")
+      api.get(`/public/products/${encodeURIComponent(code)}`).catch(async () => {
+        try {
+          const res = await fetch("/data/products.json");
+          if (res.ok) {
+            const list = await res.json();
+            const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+            const found = list.find((p) => norm(p.code) === norm(code) || norm(p.name) === norm(code) || p.id === code);
+            if (found) return { data: found };
+          }
+        } catch (e) {
+          console.error("Product detail fallback error:", e);
+        }
+        return { data: null };
+      }),
+      api.get("/public/products").catch(async () => {
+        try {
+          const res = await fetch("/data/products.json");
+          if (res.ok) {
+            return { data: await res.json() };
+          }
+        } catch (e) {
+          console.error("Products list fallback error:", e);
+        }
+        return { data: [] };
+      })
     ])
-      .then(([detailRes, allRes]) => {
-        setProduct(detailRes.data);
-        const rel = (allRes.data || [])
+      .then(async ([detailRes, allRes]) => {
+        let pData = detailRes?.data;
+        let allList = Array.isArray(allRes?.data) ? allRes.data : [];
+
+        if (!pData || allList.length === 0) {
+          try {
+            const res = await fetch("/data/products.json");
+            if (res.ok) {
+              const list = await res.json();
+              if (allList.length === 0) allList = list;
+              if (!pData) {
+                const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+                pData = list.find((p) => norm(p.code) === norm(code) || norm(p.name) === norm(code) || p.id === code);
+              }
+            }
+          } catch (e) {
+            console.error("Secondary fallback error:", e);
+          }
+        }
+
+        if (!pData) {
+          setError("Product not found or currently unavailable.");
+          return;
+        }
+
+        setProduct(pData);
+        const rel = allList
           .filter(
             (p) =>
-              p.code !== detailRes.data.code &&
-              (p.category === detailRes.data.category || p.budget_tier === detailRes.data.budget_tier)
+              p.code !== pData.code &&
+              (p.category === pData.category || p.budget_tier === pData.budget_tier)
           )
           .slice(0, 4);
         setRelated(rel);
         
         // Update document title for SEO
-        document.title = `${detailRes.data.name || detailRes.data.code} | ONCOST Corporate Gifting`;
+        document.title = `${pData.name || pData.code} | ONCOST Corporate Gifting`;
       })
       .catch((err) => {
         console.error("Failed to fetch product:", err);
@@ -241,6 +288,12 @@ function ProductDetailInner() {
                 <img
                   src={imageUrl(product.image)}
                   alt={product.name || product.code}
+                  onError={(e) => {
+                    if (e.target.src && e.target.src.includes("/api/images/")) {
+                      const clean = e.target.src.split("/api/images/")[1]?.split("?")[0];
+                      e.target.src = `/images/${clean}`;
+                    }
+                  }}
                   className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-500"
                 />
                 <button
