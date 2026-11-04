@@ -36,20 +36,27 @@ function LazyImage({ src, alt, className, eager = false, onClick }) {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState(src);
+  const [retried, setRetried] = useState(false);
   const imgRef = useRef(null);
 
   useEffect(() => {
     setCurrentSrc(src);
     setLoaded(false);
     setError(false);
+    setRetried(false);
   }, [src]);
 
   const handleError = () => {
+    if (retried) {
+      setError(true);
+      return;
+    }
+    setRetried(true);
     if (currentSrc && currentSrc.includes("/api/images/")) {
       const filename = currentSrc.split("/api/images/")[1]?.split("?")[0];
       setCurrentSrc(`/images/${filename}`);
-    } else if (currentSrc && currentSrc.startsWith("/images/")) {
-      const cleanPath = currentSrc.split("?")[0].replace(/^\/images\//, "");
+    } else if (currentSrc) {
+      const cleanPath = currentSrc.split("?")[0].replace(/^\/?(api\/)?images\//, "");
       setCurrentSrc(`${API}/images/${cleanPath}`);
     } else {
       setError(true);

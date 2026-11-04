@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "name": "Executive Gift Hampers",
+    "slug": "executive-gift-hampers"
+  },
+  {
+    "id": "2",
+    "name": "Tech & Gadgets",
+    "slug": "tech-gadgets"
+  },
+  {
+    "id": "3",
+    "name": "Desk & Workspace",
+    "slug": "desk-workspace"
+  },
+  {
+    "id": "4",
+    "name": "Drinkware & Travel",
+    "slug": "drinkware-travel"
+  },
+  {
+    "id": "5",
+    "name": "Journals & Stationery",
+    "slug": "journals-stationery"
+  }
+]

@@ -629,6 +629,9 @@ async def public_products():
         # Fallback to local products_enriched.json or products.json
         fallback_files = [
             DATA_DIR / "products_enriched.json",
+            ROOT_DIR / "backend" / "data" / "products_enriched.json",
+            ROOT_DIR.parent / "backend" / "data" / "products_enriched.json",
+            ROOT_DIR / "data" / "products_enriched.json",
             ROOT_DIR.parent / "frontend" / "public" / "data" / "products.json",
             PRODUCTS_JSON,
         ]
@@ -652,32 +655,72 @@ async def public_products():
 @api.get("/public/products/{identifier}")
 async def public_product_detail(identifier: str):
     ident_normalized = identifier.replace("-", " ").replace("_", " ").strip()
-    rule = await db.pricing_rule.find_one({"_id": "default"}) or {
+    rule = {
         "threshold": 1000, "below_increment": 50, "at_or_above_increment": 100,
     }
+    try:
+        rule_db = await db.pricing_rule.find_one({"_id": "default"})
+        if rule_db:
+            rule = rule_db
+    except Exception as e:
+        logger.warning(f"Error fetching pricing rule from db: {e}")
+
     prod = None
-    if ObjectId.is_valid(identifier):
-        prod = await db.products.find_one({"_id": ObjectId(identifier), "visible": {"$ne": False}})
+    try:
+        if ObjectId.is_valid(identifier):
+            prod = await db.products.find_one({"_id": ObjectId(identifier), "visible": {"$ne": False}})
+        if not prod:
+            prod = await db.products.find_one({
+                "code": {"$regex": f"^{re.escape(ident_normalized)}$", "$options": "i"},
+                "visible": {"$ne": False}
+            })
+        if not prod:
+            clean_code = re.sub(r'[^A-Za-z0-9]', '', identifier).upper()
+            cur = db.products.find({"visible": {"$ne": False}})
+            async for p in cur:
+                if re.sub(r'[^A-Za-z0-9]', '', p.get("code", "")).upper() == clean_code:
+                    prod = p
+                    break
+    except Exception as e:
+        logger.warning(f"Error fetching product from db: {e}")
+
     if not prod:
-        prod = await db.products.find_one({
-            "code": {"$regex": f"^{re.escape(ident_normalized)}$", "$options": "i"},
-            "visible": {"$ne": False}
-        })
-    if not prod:
+        # Resilient fallback to local enriched catalog
         clean_code = re.sub(r'[^A-Za-z0-9]', '', identifier).upper()
-        cur = db.products.find({"visible": {"$ne": False}})
-        async for p in cur:
-            if re.sub(r'[^A-Za-z0-9]', '', p.get("code", "")).upper() == clean_code:
-                prod = p
-                break
+        fallback_files = [
+            DATA_DIR / "products_enriched.json",
+            ROOT_DIR / "backend" / "data" / "products_enriched.json",
+            ROOT_DIR.parent / "backend" / "data" / "products_enriched.json",
+            ROOT_DIR / "data" / "products_enriched.json",
+            ROOT_DIR.parent / "frontend" / "public" / "data" / "products.json",
+            PRODUCTS_JSON,
+        ]
+        for fb in fallback_files:
+            if fb.exists():
+                try:
+                    loaded = json.loads(fb.read_text())
+                    if loaded and isinstance(loaded, list):
+                        for p in loaded:
+                            p_clean = re.sub(r'[^A-Za-z0-9]', '', p.get("code", "")).upper()
+                            p_name = re.sub(r'[^A-Za-z0-9]', '', p.get("name", "")).upper()
+                            if p_clean == clean_code or (clean_code and clean_code in p_name) or p.get("id") == identifier:
+                                prod = dict(p)
+                                break
+                    if prod:
+                        break
+                except Exception:
+                    pass
+
     if not prod:
         raise HTTPException(status_code=404, detail="Product not found")
 
-    prod["id"] = str(prod.pop("_id"))
+    if "_id" in prod:
+        prod["id"] = str(prod.pop("_id"))
     sg = prod.pop("sg_price", 0)
     ov = prod.pop("override_price", None)
-    oncost = int(ov) if ov is not None else compute_oncost_price(sg, rule)
-    prod["oncost_price"] = oncost
+    if "oncost_price" not in prod or prod["oncost_price"] is None:
+        oncost = int(ov) if ov is not None else compute_oncost_price(sg, rule)
+        prod["oncost_price"] = oncost
     return prod
 
 
@@ -1473,12 +1516,21 @@ async def public_categories():
         logger.warning(f"Error fetching categories from db: {e}")
 
     if not out:
-        cats_file = ROOT_DIR.parent / "frontend" / "public" / "data" / "categories.json"
-        if cats_file.exists():
-            try:
-                out = json.loads(cats_file.read_text())
-            except Exception:
-                pass
+        cats_files = [
+            DATA_DIR / "categories.json",
+            ROOT_DIR / "backend" / "data" / "categories.json",
+            ROOT_DIR.parent / "backend" / "data" / "categories.json",
+            ROOT_DIR / "data" / "categories.json",
+            ROOT_DIR.parent / "frontend" / "public" / "data" / "categories.json",
+        ]
+        for cf in cats_files:
+            if cf.exists():
+                try:
+                    out = json.loads(cf.read_text())
+                    if out:
+                        break
+                except Exception:
+                    pass
     return out
 
 
@@ -1909,10 +1961,15 @@ async def get_image(filename: str):
     search_paths = [
         IMAGES_DIR / filename,
         ROOT_DIR / "data" / "product_images" / filename,
+        ROOT_DIR / "backend" / "data" / "product_images" / filename,
         ROOT_DIR / "product_images" / filename,
         ROOT_DIR.parent / "backend" / "data" / "product_images" / filename,
         ROOT_DIR.parent / "frontend" / "public" / "images" / filename,
         ROOT_DIR.parent / "frontend" / "build" / "images" / filename,
+        ROOT_DIR / "backend" / "data" / "images" / filename,
+        ROOT_DIR / "data" / "images" / filename,
+        DATA_DIR / "product_images" / filename,
+        DATA_DIR / "images" / filename,
         Path("/tmp") / filename,
     ]
     for fp in search_paths:

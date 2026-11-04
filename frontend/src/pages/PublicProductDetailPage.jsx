@@ -274,6 +274,7 @@ function ProductDetailInner() {
                   alt={product.name || product.code}
                   onError={(e) => {
                     const current = e.target.src || "";
+                    e.target.onerror = null;
                     if (current.includes("/api/images/")) {
                       const clean = current.split("/api/images/")[1]?.split("?")[0];
                       if (clean) e.target.src = `/images/${clean}`;
@@ -499,6 +500,7 @@ function ProductDetailInner() {
                       alt={rel.name || rel.code}
                       onError={(e) => {
                         const current = e.target.src || "";
+                        e.target.onerror = null;
                         if (current.includes("/api/images/")) {
                           const clean = current.split("/api/images/")[1]?.split("?")[0];
                           if (clean) e.target.src = `/images/${clean}`;
