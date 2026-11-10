@@ -35,6 +35,8 @@ import PartnerLeadsPage from "@/pages/PartnerLeadsPage";
 import PartnerCommissionsPage from "@/pages/PartnerCommissionsPage";
 import PartnerProfilePage from "@/pages/PartnerProfilePage";
 
+import { ShortlistProvider } from "@/lib/shortlistContext";
+
 const Admin = ({ children }) => (
   <ProtectedRoute roles={["admin", "super_admin"]}>
     <AdminLayout>{children}</AdminLayout>
@@ -47,7 +49,8 @@ const PartnerOnly = ({ children }) => (
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <ShortlistProvider>
+        <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeRedirect />} />
           <Route path="/login" element={<LoginPage />} />
@@ -87,6 +90,7 @@ export default function App() {
         </Routes>
         <Toaster position="bottom-right" richColors />
       </BrowserRouter>
+    </ShortlistProvider>
     </AuthProvider>
   );
 }
