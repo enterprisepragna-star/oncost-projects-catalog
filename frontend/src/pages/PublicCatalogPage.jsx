@@ -6,7 +6,8 @@ import {
   ShoppingBag, MessageSquare, Filter, ChevronDown, ChevronRight,
   Package, Star, Gift, Sparkles, Phone, Mail, MapPin, Clock, Building2,
   Grid3X3, LayoutGrid, List, Heart, ExternalLink, RotateCcw, Loader2, AlertCircle,
-  CheckCircle2, ShieldCheck, Truck, SlidersHorizontal, Eye, HelpCircle, ArrowRight
+  CheckCircle2, ShieldCheck, Truck, SlidersHorizontal, Eye, HelpCircle, ArrowRight,
+  Menu, Users, Briefcase, BookOpen, ArrowDown as ScrollDown, ChevronUp
 } from "lucide-react";
 import { Link, useSearchParams, useNavigate } from "react-router-dom";
 import ImageLightbox from "@/components/ImageLightbox";
@@ -55,6 +56,18 @@ const FAQS = [
   }
 ];
 
+/* ─────────────────────────── NAV LINKS CONFIG ─────────────────────────── */
+const NAV_LINKS = [
+  { label: "Home",        href: "/catalog",             internal: true },
+  { label: "Products",    href: "#products",             internal: false },
+  { label: "Why ONCOST",  href: "#why-oncost",           internal: false },
+  { label: "Careers",     href: "#careers",              internal: false },
+  { label: "Contact Us",  href: "#contact",              internal: false },
+  { label: "Partners",    href: "/partners/register",    internal: true },
+  { label: "Testimonials",href: "#testimonials",         internal: false },
+  { label: "Blog",        href: "#journal",              internal: false },
+];
+
 /* ---------- Lazy Image with placeholder & resilient API fallback ---------- */
 function LazyImage({ src, alt, className, eager = false, onClick }) {
   const [loaded, setLoaded] = useState(false);
@@ -80,7 +93,7 @@ function LazyImage({ src, alt, className, eager = false, onClick }) {
       const filename = currentSrc.split("/api/images/")[1]?.split("?")[0];
       setCurrentSrc(`/images/${filename}`);
     } else if (currentSrc) {
-      const cleanPath = currentSrc.split("?")[0].replace(/^\/?(api\/)?images\//, "");
+      const cleanPath = currentSrc.split("?")[0].replace(/^\/?( api\/)?images\//, "");
       setCurrentSrc(`${API}/images/${cleanPath}`);
     } else {
       setError(true);
@@ -534,7 +547,9 @@ function TableMode({ products, onQuote }) {
   );
 }
 
-/* ---------- Main Catalog Page Controller ---------- */
+/* ═══════════════════════════════════════════════════════════════
+   MAIN CATALOG PAGE CONTROLLER
+═══════════════════════════════════════════════════════════════ */
 export default function PublicCatalogPage() {
   const [products, setProducts] = useState(BUNDLED_PRODUCTS);
   const [categories, setCategories] = useState(BUNDLED_CATEGORIES);
@@ -546,6 +561,7 @@ export default function PublicCatalogPage() {
   const [showFilters, setShowFilters] = useState(false);
   const [page, setPage] = useState(1);
   const [viewMode, setViewMode] = useState("grid"); // 'grid' | 'bento' | 'table'
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   // Filters
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -575,6 +591,8 @@ export default function PublicCatalogPage() {
         e.preventDefault();
         searchInputRef.current?.focus();
       }
+      // Close mobile nav on Escape
+      if (e.key === "Escape") setMobileNavOpen(false);
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
@@ -696,9 +714,15 @@ export default function PublicCatalogPage() {
     return [...new Set(products.map((p) => p.category).filter(Boolean))].sort();
   }, [products]);
 
+  /* ── smooth scroll helper ── */
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMobileNavOpen(false);
+  };
+
   return (
     <div data-testid={PUBLIC.catalogContainer} className="min-h-screen bg-[#FAFAFA] text-zinc-900 flex flex-col justify-between selection:bg-[#002FA7] selection:text-white">
-      
+
       {/* ===== LUXURY TOP ANNOUNCEMENT BANNER ===== */}
       <div className="bg-[#09090B] text-zinc-300 text-[11px] font-mono py-2 px-4 border-b border-zinc-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
@@ -728,12 +752,12 @@ export default function PublicCatalogPage() {
       </div>
 
       {/* ===== MAIN STICKY NAVIGATION BAR ===== */}
-      <nav className="sticky top-0 z-40 glass-nav shadow-sm">
+      <nav className="sticky top-0 z-40 glass-nav shadow-sm" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
-          
+
           {/* Brand Logo */}
           <div className="flex items-center gap-6">
-            <Link to="/" className="flex items-baseline gap-2.5 group">
+            <Link to="/" className="flex items-baseline gap-2.5 group shrink-0" aria-label="ONCOST Home">
               <span className="logo-mark text-2xl text-zinc-900 group-hover:text-[#002FA7] transition-colors">
                 ONCOST
               </span>
@@ -742,29 +766,39 @@ export default function PublicCatalogPage() {
               </span>
             </Link>
 
-            {/* Nav category anchors */}
-            <div className="hidden lg:flex items-center gap-1 pl-4 border-l border-zinc-200">
-              <button
-                onClick={() => setSelectedCategory("")}
-                className={`text-xs px-3 py-1.5 transition-colors ${!selectedCategory ? "text-[#002FA7] font-semibold bg-[#002FA7]/5" : "text-zinc-600 hover:text-zinc-900"}`}
-              >
-                All Sets ({products.length})
-              </button>
-              {uniqueCategories.slice(0, 3).map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`text-xs px-3 py-1.5 transition-colors ${selectedCategory === cat ? "text-[#002FA7] font-semibold bg-[#002FA7]/5" : "text-zinc-600 hover:text-zinc-900"}`}
-                >
-                  {cat}
-                </button>
-              ))}
+            {/* Desktop Nav Links */}
+            <div className="hidden lg:flex items-center gap-0.5 pl-4 border-l border-zinc-200">
+              {NAV_LINKS.map((link) =>
+                link.internal ? (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-xs px-3 py-1.5 text-zinc-600 hover:text-[#002FA7] hover:bg-[#002FA7]/5 transition-colors font-medium whitespace-nowrap"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={(e) => {
+                      if (link.href.startsWith("#")) {
+                        e.preventDefault();
+                        scrollTo(link.href.slice(1));
+                      }
+                    }}
+                    className="text-xs px-3 py-1.5 text-zinc-600 hover:text-[#002FA7] hover:bg-[#002FA7]/5 transition-colors font-medium whitespace-nowrap"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
             </div>
           </div>
 
           {/* Right Action Center */}
-          <div className="flex items-center gap-3">
-            
+          <div className="flex items-center gap-2 sm:gap-3">
+
             {/* Search Input with Hotkey Badge */}
             <div className="relative">
               <Search
@@ -776,7 +810,7 @@ export default function PublicCatalogPage() {
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Search catalog or SKU..."
-                className="pl-9 pr-14 py-2 border border-zinc-300 text-xs w-44 sm:w-64 focus:border-[#002FA7] focus:ring-1 focus:ring-[#002FA7]/30 outline-none bg-white transition-all shadow-inner"
+                className="pl-9 pr-14 py-2 border border-zinc-300 text-xs w-36 sm:w-52 lg:w-64 focus:border-[#002FA7] focus:ring-1 focus:ring-[#002FA7]/30 outline-none bg-white transition-all shadow-inner"
                 aria-label="Search catalog"
               />
               {q ? (
@@ -817,19 +851,70 @@ export default function PublicCatalogPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center gap-1.5 px-3.5 py-2 bg-[#25D366] hover:bg-[#20b857] text-white text-xs font-semibold uppercase tracking-wider transition-all shadow-sm"
+              aria-label="Chat on WhatsApp"
             >
               <MessageSquare size={13} />
               WhatsApp
             </a>
+
+            {/* Mobile Hamburger */}
+            <button
+              onClick={() => setMobileNavOpen((v) => !v)}
+              className="lg:hidden p-2.5 border border-zinc-300 bg-white text-zinc-700 hover:border-[#002FA7] hover:text-[#002FA7] transition-colors"
+              aria-label={mobileNavOpen ? "Close navigation" : "Open navigation"}
+              aria-expanded={mobileNavOpen}
+            >
+              {mobileNavOpen ? <X size={18} /> : <Menu size={18} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Nav Dropdown */}
+        {mobileNavOpen && (
+          <div className="lg:hidden border-t border-zinc-200 bg-white animate-fade-up shadow-lg">
+            <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-0.5">
+              {NAV_LINKS.map((link) =>
+                link.internal ? (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    onClick={() => setMobileNavOpen(false)}
+                    className="text-sm px-3 py-2.5 text-zinc-700 hover:text-[#002FA7] hover:bg-[#002FA7]/5 transition-colors font-medium border-b border-zinc-100 last:border-0"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo(link.href.slice(1));
+                    }}
+                    className="text-sm px-3 py-2.5 text-zinc-700 hover:text-[#002FA7] hover:bg-[#002FA7]/5 transition-colors font-medium border-b border-zinc-100 last:border-0"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
+              <a
+                href="https://wa.me/919999999999?text=Hi%20ONCOST%20team%2C%20I%20would%20like%20to%20enquire%20about%20corporate%20gifting%20options."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 flex items-center justify-center gap-1.5 py-2.5 bg-[#25D366] text-white text-sm font-semibold tracking-wider"
+              >
+                <MessageSquare size={15} /> WhatsApp Us
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* ===== EDITORIAL HERO SECTION ===== */}
       <header className="relative bg-white border-b border-zinc-200 overflow-hidden grid-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 lg:py-20 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Left Hero Content */}
             <div className="lg:col-span-8">
               <div className="inline-flex items-center gap-2 border border-[#002FA7]/30 bg-[#002FA7]/5 px-3 py-1 mb-4">
@@ -840,16 +925,32 @@ export default function PublicCatalogPage() {
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-zinc-950 leading-[1.08]">
-                Bespoke Corporate Sets. <br className="hidden sm:inline" />
-                <span className="font-semibold text-[#002FA7]">Precision Engineered.</span>
+                Corporate gifting<br className="hidden sm:inline" />
+                <span className="font-semibold text-[#002FA7]"> that feels personal.</span>
               </h1>
 
               <p className="text-zinc-600 mt-5 max-w-2xl text-sm sm:text-base leading-relaxed">
-                Discover {products.length} thoughtfully designed executive hampers, insulated smart drinkware sets, and employee onboarding packages. Complete with laser logo branding, luxury gift box packaging, and verified Pan-India delivery.
+                Discover {products.length} thoughtfully designed executive hampers, insulated smart drinkware sets, and employee onboarding packages — complete with laser logo branding, luxury gift box packaging, and verified PAN-India delivery.
               </p>
 
+              {/* Hero CTA Buttons */}
+              <div className="flex flex-wrap items-center gap-3 mt-7">
+                <button
+                  onClick={() => scrollTo("catalog-products")}
+                  className="px-6 py-3 bg-[#002FA7] hover:bg-[#002075] text-white text-sm font-semibold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm"
+                >
+                  <Gift size={15} /> Explore Products
+                </button>
+                <Link
+                  to="/partners/register"
+                  className="px-6 py-3 border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white text-sm font-semibold uppercase tracking-wider transition-all flex items-center gap-2"
+                >
+                  <Users size={15} /> Become a Partner
+                </Link>
+              </div>
+
               {/* 4 Trust Value Pillars */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8 pt-8 border-t border-zinc-200">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10 pt-8 border-t border-zinc-200">
                 <div className="p-3 bg-white border border-zinc-200">
                   <Sparkles size={16} className="text-[#002FA7] mb-1.5" />
                   <p className="text-xs font-semibold text-zinc-900">Custom Branding</p>
@@ -907,14 +1008,19 @@ export default function PublicCatalogPage() {
                 </div>
 
                 <button
-                  onClick={() => {
-                    const el = document.getElementById("catalog-products");
-                    el?.scrollIntoView({ behavior: "smooth" });
-                  }}
+                  onClick={() => scrollTo("catalog-products")}
                   className="w-full mt-6 py-3 bg-[#002FA7] hover:bg-[#002075] text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2"
                 >
                   Explore Complete Range <ArrowDown size={14} />
                 </button>
+
+                <a
+                  href="#contact"
+                  onClick={(e) => { e.preventDefault(); scrollTo("contact"); }}
+                  className="w-full mt-2 py-2.5 border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                >
+                  <Phone size={13} /> Talk to Our Team
+                </a>
               </div>
             </div>
 
@@ -927,11 +1033,11 @@ export default function PublicCatalogPage() {
         id="catalog-products"
         className="sticky top-[61px] z-30 bg-white/95 backdrop-blur-md border-b border-zinc-200 shadow-sm transition-all"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
-          
+        <div id="products" className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+
           {/* Top Bar: Count + View Modes + Filter Toggle + Sort */}
           <div className="flex items-center justify-between gap-3 flex-wrap">
-            
+
             {/* Products Count & Active Filter Indicator */}
             <div className="flex items-center gap-3">
               <p className="text-xs text-zinc-600">
@@ -955,7 +1061,7 @@ export default function PublicCatalogPage() {
 
             {/* Right Controls: View Switcher + Filter Toggle + Sort */}
             <div className="flex items-center gap-2 flex-wrap">
-              
+
               {/* View Modes */}
               <div className="hidden sm:flex items-center border border-zinc-200 bg-zinc-50 p-0.5">
                 <button
@@ -1042,7 +1148,7 @@ export default function PublicCatalogPage() {
           {/* Expandable Secondary Filter Drawer */}
           {showFilters && (
             <div className="mt-3 pt-3 border-t border-zinc-200/80 space-y-4 animate-fade-up bg-zinc-50/50 p-3 border">
-              
+
               {/* Budget Tiers */}
               <div>
                 <p className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-wider mb-1.5">
@@ -1215,19 +1321,20 @@ export default function PublicCatalogPage() {
         )}
       </main>
 
-      {/* ===== ENTERPRISE HOW IT WORKS & BRANDING TECHNIQUES ===== */}
-      <section className="bg-white border-t border-zinc-200 py-16">
+      {/* ===== WHY ONCOST ===== */}
+      <section id="why-oncost" className="bg-white border-t border-zinc-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="overline text-[#002FA7]">Corporate Order Workflow</span>
+            <span className="overline text-[#002FA7]">Why ONCOST</span>
             <h2 className="font-display text-3xl font-light text-zinc-950 mt-1">
               Seamless Procurement from <span className="font-semibold text-[#002FA7]">Selection to Delivery</span>
             </h2>
             <p className="text-zinc-500 text-sm mt-3 leading-relaxed">
-              We make corporate gifting effortless for HR, marketing, and procurement teams with guaranteed turnarounds and digital proofs.
+              We make corporate gifting effortless for HR, marketing, and procurement teams — with guaranteed turnarounds, digital proofs, and a dedicated account desk for bulk orders.
             </p>
           </div>
 
+          {/* 4-Step How It Works */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
               {
@@ -1283,6 +1390,88 @@ export default function PublicCatalogPage() {
               </div>
             </div>
           </div>
+
+          {/* CTA row */}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+            <button
+              onClick={() => scrollTo("catalog-products")}
+              className="px-6 py-3 bg-[#002FA7] hover:bg-[#002075] text-white text-sm font-semibold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm"
+            >
+              <Gift size={15} /> Browse All Products
+            </button>
+            <a
+              href="#contact"
+              onClick={(e) => { e.preventDefault(); scrollTo("contact"); }}
+              className="px-6 py-3 border border-zinc-300 hover:border-zinc-500 text-zinc-700 hover:text-zinc-900 text-sm font-semibold uppercase tracking-wider transition-all flex items-center gap-2"
+            >
+              <Phone size={15} /> Talk to Our Team
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== PARTNERS SECTION ===== */}
+      <section id="partners" className="bg-zinc-950 border-t border-zinc-800 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left: Content */}
+            <div>
+              <span className="overline text-[#002FA7]">Partner Program</span>
+              <h2 className="font-display text-3xl font-light text-white mt-1">
+                Grow with ONCOST. <span className="font-semibold text-[#002FA7]">Earn on every order.</span>
+              </h2>
+              <p className="text-zinc-400 text-sm mt-4 leading-relaxed">
+                ONCOST's referral partner program is open to procurement consultants, HR agencies, event management firms, and freelance gifting advisors. Refer a corporate client, track your leads in real time, and earn a commission on every confirmed order.
+              </p>
+
+              <ul className="mt-6 space-y-3">
+                {[
+                  "Zero investment to get started — register and get a referral link instantly",
+                  "Track leads, quotes, and commissions through your partner dashboard",
+                  "Dedicated account support for large enterprise referrals",
+                  "Monthly payout cycle with GST-compliant commission invoices",
+                ].map((point, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-zinc-300">
+                    <CheckCircle2 size={16} className="text-[#002FA7] mt-0.5 shrink-0" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                to="/partners/register"
+                className="inline-flex items-center gap-2 mt-8 px-7 py-3.5 bg-[#002FA7] hover:bg-[#002075] text-white text-sm font-bold uppercase tracking-wider transition-all shadow-lg"
+              >
+                <Users size={15} /> Register as a Partner
+              </Link>
+            </div>
+
+            {/* Right: Partner stats / visual card */}
+            <div className="bg-zinc-900 border border-zinc-800 p-8">
+              <div className="grid-bg-dark absolute inset-0 opacity-30 pointer-events-none" />
+              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500 font-bold mb-5">Who can partner with us?</p>
+              <div className="space-y-4">
+                {[
+                  { icon: Briefcase, title: "Procurement Consultants", desc: "Advisors who help businesses source and manage corporate gifts at scale." },
+                  { icon: Users, title: "HR & Employee Experience Teams", desc: "Internal teams looking to centralise their onboarding and reward gifting." },
+                  { icon: Building2, title: "Event & Conference Managers", desc: "Agencies that need branded giveaways for summits, product launches, and AWTs." },
+                  { icon: Star, title: "Freelance Gifting Advisors", desc: "Independent consultants managing gifting budgets for multiple clients." },
+                ].map(({ icon: Icon, title, desc }) => (
+                  <div key={title} className="flex items-start gap-4 pb-4 border-b border-zinc-800 last:border-0 last:pb-0">
+                    <span className="p-2 bg-[#002FA7]/20 border border-[#002FA7]/30 shrink-0">
+                      <Icon size={14} className="text-[#002FA7]" />
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-white">{title}</p>
+                      <p className="text-xs text-zinc-500 mt-0.5 leading-relaxed">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -1311,39 +1500,210 @@ export default function PublicCatalogPage() {
         </div>
       </section>
 
+      {/* ===== TESTIMONIALS PLACEHOLDER ===== */}
+      <section id="testimonials" className="bg-white border-t border-zinc-200 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <span className="overline text-[#002FA7]">Customer Stories</span>
+          <h2 className="font-display text-2xl sm:text-3xl font-light text-zinc-950 mt-1">
+            Testimonials
+          </h2>
+          <div className="mt-10 border-2 border-dashed border-zinc-200 p-10 bg-zinc-50">
+            <Star size={28} className="text-zinc-300 mx-auto mb-3 stroke-1" />
+            <p className="text-sm font-medium text-zinc-500">
+              Customer testimonials coming soon.
+            </p>
+            <p className="text-xs text-zinc-400 mt-2 max-w-xs mx-auto leading-relaxed">
+              We publish only genuine, approved quotes from our corporate clients. Check back after launch.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== BLOG / GIFTING JOURNAL PLACEHOLDER ===== */}
+      <section id="journal" className="bg-zinc-50 border-t border-zinc-200 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <span className="overline text-[#002FA7]">ONCOST Gifting Journal</span>
+          <h2 className="font-display text-2xl sm:text-3xl font-light text-zinc-950 mt-1">
+            Blog
+          </h2>
+          <div className="mt-10 border-2 border-dashed border-zinc-200 p-10 bg-white">
+            <BookOpen size={28} className="text-zinc-300 mx-auto mb-3 stroke-1" />
+            <p className="text-sm font-medium text-zinc-500">
+              Gifting guides, trend reports, and procurement tips — coming soon.
+            </p>
+            <p className="text-xs text-zinc-400 mt-2 max-w-xs mx-auto leading-relaxed">
+              Our editorial journal launches alongside the catalog. We won't publish sample content — only real, useful articles.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CAREERS PLACEHOLDER ===== */}
+      <section id="careers" className="bg-white border-t border-zinc-200 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <span className="overline text-[#002FA7]">Join the Team</span>
+          <h2 className="font-display text-2xl sm:text-3xl font-light text-zinc-950 mt-1">
+            Careers
+          </h2>
+          <div className="mt-10 border-2 border-dashed border-zinc-200 p-10 bg-zinc-50">
+            <Briefcase size={28} className="text-zinc-300 mx-auto mb-3 stroke-1" />
+            <p className="text-sm font-medium text-zinc-500">
+              We're growing — opportunities coming soon.
+            </p>
+            <p className="text-xs text-zinc-400 mt-2 max-w-xs mx-auto leading-relaxed">
+              Open roles will be listed here once available. No listings are posted until positions are confirmed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CONTACT SECTION ===== */}
+      <section id="contact" className="bg-zinc-950 border-t border-zinc-800 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            {/* Left: Header + details */}
+            <div>
+              <span className="overline text-[#002FA7]">Get in Touch</span>
+              <h2 className="font-display text-3xl font-light text-white mt-1">
+                Talk to our <span className="font-semibold text-[#002FA7]">corporate gifting team.</span>
+              </h2>
+              <p className="text-zinc-400 text-sm mt-4 leading-relaxed max-w-md">
+                Whether you need a quote, want to discuss a custom brief, or have questions about bulk ordering — our desk is ready. We respond within 2 business hours.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                <a
+                  href="tel:+919999999999"
+                  className="flex items-center gap-4 group"
+                >
+                  <span className="p-3 bg-[#002FA7]/20 border border-[#002FA7]/30">
+                    <Phone size={16} className="text-[#002FA7]" />
+                  </span>
+                  <div>
+                    <p className="text-[10px] font-mono uppercase tracking-wider text-zinc-500">Phone</p>
+                    <p className="text-sm text-zinc-200 group-hover:text-white transition-colors font-medium">
+                      +91-99999-99999
+                    </p>
+                    <p className="text-[11px] text-zinc-500">Mon–Sat, 9 AM – 7 PM IST</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://wa.me/919999999999?text=Hi%20ONCOST%20team%2C%20I%20would%20like%20to%20enquire%20about%20corporate%20gifting%20options."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 group"
+                >
+                  <span className="p-3 bg-[#25D366]/20 border border-[#25D366]/30">
+                    <MessageSquare size={16} className="text-[#25D366]" />
+                  </span>
+                  <div>
+                    <p className="text-[10px] font-mono uppercase tracking-wider text-zinc-500">WhatsApp</p>
+                    <p className="text-sm text-zinc-200 group-hover:text-white transition-colors font-medium">
+                      Chat instantly on WhatsApp
+                    </p>
+                    <p className="text-[11px] text-zinc-500">Quickest way to reach us</p>
+                  </div>
+                </a>
+
+                <a
+                  href="mailto:contact@oncostcatalog.in"
+                  className="flex items-center gap-4 group"
+                >
+                  <span className="p-3 bg-zinc-800 border border-zinc-700">
+                    <Mail size={16} className="text-zinc-400" />
+                  </span>
+                  <div>
+                    <p className="text-[10px] font-mono uppercase tracking-wider text-zinc-500">Email</p>
+                    <p className="text-sm text-zinc-200 group-hover:text-white transition-colors font-medium">
+                      contact@oncostcatalog.in
+                    </p>
+                    <p className="text-[11px] text-zinc-500">Response within 2 business hours</p>
+                  </div>
+                </a>
+
+                <div className="flex items-center gap-4">
+                  <span className="p-3 bg-zinc-800 border border-zinc-700">
+                    <MapPin size={16} className="text-zinc-400" />
+                  </span>
+                  <div>
+                    <p className="text-[10px] font-mono uppercase tracking-wider text-zinc-500">Operations</p>
+                    <p className="text-sm text-zinc-300 font-medium">Bengaluru · Hyderabad · PAN-India</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Quick enquiry prompt card */}
+            <div className="bg-zinc-900 border border-zinc-800 p-8">
+              <p className="font-display text-lg font-medium text-white mb-1">Start a quick enquiry</p>
+              <p className="text-xs text-zinc-400 leading-relaxed mb-6">
+                Not ready to call? Tap the button below to open a WhatsApp chat with our team, pre-filled with a corporate gifting enquiry message. No forms, no sign-up.
+              </p>
+              <a
+                href="https://wa.me/919999999999?text=Hi%20ONCOST%20team%2C%20I%20would%20like%20to%20enquire%20about%20corporate%20gifting%20options."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#25D366] hover:bg-[#20b857] text-white text-sm font-bold uppercase tracking-wider transition-all"
+              >
+                <MessageSquare size={15} /> WhatsApp Our Team
+              </a>
+              <div className="mt-4 pt-4 border-t border-zinc-800 text-center">
+                <p className="text-[11px] text-zinc-500 font-mono">or browse the catalog and use the</p>
+                <button
+                  onClick={() => scrollTo("catalog-products")}
+                  className="mt-1 text-xs text-[#002FA7] hover:underline font-semibold"
+                >
+                  Request Quote button on any product →
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ===== LUXURY FOOTER ===== */}
       <footer className="bg-zinc-950 text-white border-t border-zinc-800 pt-16 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
-            
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
+
             {/* Col 1: Brand */}
-            <div className="space-y-3">
+            <div className="col-span-2 md:col-span-1 space-y-3">
               <span className="logo-mark text-2xl text-white">ONCOST</span>
               <p className="text-xs text-zinc-400 leading-relaxed">
-                Pragna Enterprises corporate gifting division. Providing premium curated hampers, drinkware, and tech accessories with bespoke branding across India.
+                Pragna Enterprises corporate gifting division. Premium curated hampers, drinkware, and tech accessories with bespoke branding across India.
               </p>
               <div className="pt-2 text-xs font-mono text-zinc-500">
                 GSTIN available on verified corporate invoices.
               </div>
             </div>
 
-            {/* Col 2: Categories */}
+            {/* Col 2: Navigation */}
             <div>
               <p className="font-mono text-[11px] font-bold uppercase tracking-wider text-white mb-3">
-                Key Collections
+                Navigation
               </p>
               <ul className="space-y-2 text-xs text-zinc-400">
-                {uniqueCategories.map((c) => (
-                  <li key={c}>
-                    <button
-                      onClick={() => {
-                        setSelectedCategory(c);
-                        document.getElementById("catalog-products")?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                      className="hover:text-white transition-colors"
-                    >
-                      {c}
-                    </button>
+                {NAV_LINKS.map((link) => (
+                  <li key={link.label}>
+                    {link.internal ? (
+                      <Link to={link.href} className="hover:text-white transition-colors">{link.label}</Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        onClick={(e) => {
+                          if (link.href.startsWith("#")) {
+                            e.preventDefault();
+                            scrollTo(link.href.slice(1));
+                          }
+                        }}
+                        className="hover:text-white transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -1383,10 +1743,16 @@ export default function PublicCatalogPage() {
               </p>
               <div className="mt-3 space-y-1.5 text-xs">
                 <a
-                  href="mailto:hello@oncostcatalog.in"
+                  href="mailto:contact@oncostcatalog.in"
                   className="text-zinc-300 hover:text-white flex items-center gap-2 transition-colors"
                 >
-                  <Mail size={13} className="text-[#002FA7]" /> hello@oncostcatalog.in
+                  <Mail size={13} className="text-[#002FA7]" /> contact@oncostcatalog.in
+                </a>
+                <a
+                  href="tel:+919999999999"
+                  className="text-zinc-300 hover:text-white flex items-center gap-2 transition-colors"
+                >
+                  <Phone size={13} className="text-[#002FA7]" /> +91-99999-99999
                 </a>
                 <a
                   href="https://wa.me/919999999999"
@@ -1394,7 +1760,7 @@ export default function PublicCatalogPage() {
                   rel="noopener noreferrer"
                   className="text-[#25D366] hover:underline flex items-center gap-2"
                 >
-                  <MessageSquare size={13} /> Chat on WhatsApp (+91-99999-99999)
+                  <MessageSquare size={13} /> Chat on WhatsApp
                 </a>
               </div>
             </div>
@@ -1404,7 +1770,11 @@ export default function PublicCatalogPage() {
           {/* Bottom Bar */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-mono">
             <p>© {new Date().getFullYear()} ONCOST · PRAGNA ENTERPRISES. All rights reserved.</p>
-            <p>Running on Localhost · Client Data Protected</p>
+            <p className="flex items-center gap-3">
+              <span>Prices excl. 18% GST</span>
+              <span className="text-zinc-700">|</span>
+              <span>Subject to availability</span>
+            </p>
           </div>
         </div>
       </footer>
