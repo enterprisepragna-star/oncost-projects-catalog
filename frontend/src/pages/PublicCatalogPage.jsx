@@ -7,7 +7,7 @@ import {
   Package, Star, Gift, Sparkles, Phone, Mail, MapPin, Clock, Building2,
   Grid3X3, LayoutGrid, List, Heart, ExternalLink, RotateCcw, Loader2, AlertCircle,
   CheckCircle2, ShieldCheck, Truck, SlidersHorizontal, Eye, HelpCircle, ArrowRight,
-  Menu, Users, Briefcase, BookOpen, ArrowDown as ScrollDown, ChevronUp
+  Menu, Users, Briefcase, BookOpen, ArrowDown as ScrollDown, ChevronUp, Wrench
 } from "lucide-react";
 import { Link, useSearchParams, useNavigate } from "react-router-dom";
 import ImageLightbox from "@/components/ImageLightbox";
@@ -15,6 +15,7 @@ import { useShortlist } from "@/lib/shortlistContext";
 import ShortlistDrawer from "@/components/ShortlistDrawer";
 import EnquiryModal from "@/components/EnquiryModal";
 import { BUNDLED_PRODUCTS, BUNDLED_CATEGORIES } from "@/data/catalogData";
+import { BUNDLED_SERVICES } from "@/data/servicesData";
 
 const ITEMS_PER_PAGE = 12;
 
@@ -60,6 +61,7 @@ const FAQS = [
 const NAV_LINKS = [
   { label: "Home",        href: "/catalog",             internal: true },
   { label: "Products",    href: "#products",             internal: false },
+  { label: "Services",    href: "#services",             internal: false },
   { label: "Why ONCOST",  href: "#why-oncost",           internal: false },
   { label: "Careers",     href: "#careers",              internal: false },
   { label: "Contact Us",  href: "#contact",              internal: false },
@@ -553,6 +555,7 @@ function TableMode({ products, onQuote }) {
 export default function PublicCatalogPage() {
   const [products, setProducts] = useState(BUNDLED_PRODUCTS);
   const [categories, setCategories] = useState(BUNDLED_CATEGORIES);
+  const [services, setServices] = useState(BUNDLED_SERVICES);
   const [loading, setLoading] = useState(false);
   const [q, setQ] = useState("");
   const [sort, setSort] = useState("code");
@@ -618,6 +621,16 @@ export default function PublicCatalogPage() {
       })
       .catch((err) => {
         console.warn("Live categories API unavailable, using bundled categories:", err?.message);
+      });
+
+    api.get("/public/services")
+      .then((res) => {
+        if (Array.isArray(res?.data) && res.data.length > 0) {
+          setServices(res.data);
+        }
+      })
+      .catch((err) => {
+        console.warn("Live services API unavailable, using bundled services:", err?.message);
       });
 
     // Referral preservation
@@ -718,6 +731,17 @@ export default function PublicCatalogPage() {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMobileNavOpen(false);
+  };
+
+  const handleServiceEnquire = (service) => {
+    setQuoteProduct({
+      code: service.title,
+      name: service.title,
+      description: service.description,
+      set_type_display: "Enterprise Service",
+      moq: 1,
+      oncost_price: 0,
+    });
   };
 
   return (
@@ -1320,6 +1344,48 @@ export default function PublicCatalogPage() {
           </>
         )}
       </main>
+
+      {/* ===== OUR SERVICES SECTION ===== */}
+      <section id="services" className="bg-[#F8FAFC] border-t border-zinc-200 py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-14">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight">
+              Our Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+            {services.map((svc) => (
+              <div
+                key={svc.id || svc.slug || svc.title}
+                className="bg-white rounded-2xl border border-zinc-200/80 p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg hover:border-zinc-300 transition-all duration-300 group"
+              >
+                <div>
+                  <div className="w-11 h-11 rounded-xl bg-blue-50/90 border border-blue-100 flex items-center justify-center text-blue-600 mb-6">
+                    <Wrench size={20} className="stroke-[2.2] -rotate-45" />
+                  </div>
+                  <h3 className="font-bold text-lg text-zinc-900 tracking-tight leading-snug">
+                    {svc.title}
+                  </h3>
+                  <p className="text-zinc-500 text-sm leading-relaxed mt-2.5 mb-6">
+                    {svc.description}
+                  </p>
+                </div>
+
+                <div>
+                  <button
+                    type="button"
+                    onClick={() => handleServiceEnquire(svc)}
+                    className="text-blue-600 hover:text-blue-700 font-semibold text-sm inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all cursor-pointer"
+                  >
+                    Learn more <ArrowRight size={15} />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ===== WHY ONCOST ===== */}
       <section id="why-oncost" className="bg-white border-t border-zinc-200 py-16">

@@ -104,6 +104,7 @@ COMPANY_AUTHORIZED_SIGNATORY = os.environ.get("COMPANY_AUTHORIZED_SIGNATORY", "C
 DATA_DIR = ROOT_DIR / "data"
 IMAGES_DIR = DATA_DIR / "product_images"
 PRODUCTS_JSON = DATA_DIR / "products.json"
+SERVICES_JSON = DATA_DIR / "services.json"
 
 import certifi
 import asyncio
@@ -1534,6 +1535,39 @@ async def public_categories():
     return out
 
 
+@api.get("/public/services")
+async def public_services():
+    out = []
+    try:
+        cur = db.services.find({"visible": {"$ne": False}}).sort("order", 1)
+        for s in await cur.to_list(length=100):
+            if "_id" in s:
+                s["id"] = str(s.pop("_id"))
+            out.append(s)
+    except Exception as e:
+        logger.warning(f"Error fetching services from db: {e}")
+
+    if not out:
+        services_files = [
+            SERVICES_JSON,
+            DATA_DIR / "services.json",
+            ROOT_DIR / "backend" / "data" / "services.json",
+            ROOT_DIR.parent / "backend" / "data" / "services.json",
+            ROOT_DIR / "data" / "services.json",
+            ROOT_DIR.parent / "frontend" / "public" / "data" / "services.json",
+        ]
+        for sf in services_files:
+            if sf.exists():
+                try:
+                    loaded = json.loads(sf.read_text())
+                    if loaded and isinstance(loaded, list):
+                        out = loaded
+                        break
+                except Exception:
+                    pass
+    return out
+
+
 @api.post("/categories")
 async def create_category(payload: CategoryIn, _user=Depends(get_current_user)):
     name = (payload.name or "").strip()
@@ -2084,6 +2118,31 @@ async def startup():
             if docs_to_insert:
                 await db.products.insert_many(docs_to_insert)
                 logger.info(f"Seeded {len(docs_to_insert)} new products from products.json")
+
+        # Seed services if services.json exists and db has missing services
+        if SERVICES_JSON.exists():
+            try:
+                services_items = json.loads(SERVICES_JSON.read_text())
+                existing_svc = await db.services.find({}, {"slug": 1}).to_list(length=None)
+                existing_slugs = {doc.get("slug") for doc in existing_svc if doc.get("slug")}
+                svc_to_insert = []
+                for idx, s in enumerate(services_items):
+                    slug = s.get("slug") or s.get("id") or f"svc-{idx+1}"
+                    if slug not in existing_slugs:
+                        svc_to_insert.append({
+                            "slug": slug,
+                            "title": s.get("title", ""),
+                            "description": s.get("description", ""),
+                            "icon": s.get("icon", "wrench"),
+                            "order": s.get("order", idx + 1),
+                            "visible": s.get("visible", True),
+                            "created_at": iso(now_utc()),
+                        })
+                if svc_to_insert:
+                    await db.services.insert_many(svc_to_insert)
+                    logger.info(f"Seeded {len(svc_to_insert)} services into db.services")
+            except Exception as e:
+                logger.warning(f"Services startup seeding error: {e}")
     except Exception as e:
         logger.error(f"Startup DB initialization error (continuing): {e}")
 
