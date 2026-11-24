@@ -115,7 +115,7 @@ class DBProxy:
     def __getattr__(self, name):
         loop = asyncio.get_running_loop()
         if loop not in _clients:
-            kwargs = {}
+            kwargs = {"serverSelectionTimeoutMS": 5000}
             if MONGO_URL.startswith("mongodb+srv://") or "tls=true" in MONGO_URL.lower():
                 kwargs["tlsCAFile"] = certifi.where()
             _clients[loop] = AsyncIOMotorClient(MONGO_URL, **kwargs)

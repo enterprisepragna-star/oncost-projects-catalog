@@ -57,6 +57,7 @@ export default function App() {
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} />
           <Route path="/catalog" element={<PublicCatalogPage />} />
+          <Route path="/services" element={<PublicCatalogPage defaultScrollTo="services" />} />
           <Route path="/catalog/:code" element={<PublicProductDetailPage />} />
           <Route path="/product/:code" element={<PublicProductDetailPage />} />
           <Route path="/q/:token" element={<PublicQuotationPage />} />

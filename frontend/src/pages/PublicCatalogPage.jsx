@@ -60,14 +60,14 @@ const FAQS = [
 /* ─────────────────────────── NAV LINKS CONFIG ─────────────────────────── */
 const NAV_LINKS = [
   { label: "Home",        href: "/catalog",             internal: true },
-  { label: "Products",    href: "#products",             internal: false },
-  { label: "Services",    href: "#services",             internal: false },
-  { label: "Why ONCOST",  href: "#why-oncost",           internal: false },
-  { label: "Careers",     href: "#careers",              internal: false },
-  { label: "Contact Us",  href: "#contact",              internal: false },
-  { label: "Partners",    href: "/partners/register",    internal: true },
-  { label: "Testimonials",href: "#testimonials",         internal: false },
-  { label: "Blog",        href: "#journal",              internal: false },
+  { label: "Our Services",href: "#services",            internal: false, highlight: true },
+  { label: "Products",    href: "#products",            internal: false },
+  { label: "Why ONCOST",  href: "#why-oncost",          internal: false },
+  { label: "Careers",     href: "#careers",             internal: false },
+  { label: "Contact Us",  href: "#contact",             internal: false },
+  { label: "Partners",    href: "/partners/register",   internal: true },
+  { label: "Testimonials",href: "#testimonials",        internal: false },
+  { label: "Blog",        href: "#journal",             internal: false },
 ];
 
 /* ---------- Lazy Image with placeholder & resilient API fallback ---------- */
@@ -552,7 +552,7 @@ function TableMode({ products, onQuote }) {
 /* ═══════════════════════════════════════════════════════════════
    MAIN CATALOG PAGE CONTROLLER
 ═══════════════════════════════════════════════════════════════ */
-export default function PublicCatalogPage() {
+export default function PublicCatalogPage({ defaultScrollTo = null }) {
   const [products, setProducts] = useState(BUNDLED_PRODUCTS);
   const [categories, setCategories] = useState(BUNDLED_CATEGORIES);
   const [services, setServices] = useState(BUNDLED_SERVICES);
@@ -574,6 +574,16 @@ export default function PublicCatalogPage() {
   const { count: shortlistCount, setIsOpen: setShortlistOpen } = useShortlist();
   const [searchParams, setSearchParams] = useSearchParams();
   const searchInputRef = useRef(null);
+
+  // Smooth scroll to services if requested via prop or URL hash
+  useEffect(() => {
+    if (defaultScrollTo === "services" || window.location.hash === "#services") {
+      const timer = setTimeout(() => {
+        document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [defaultScrollTo]);
 
   // Read URL params
   useEffect(() => {
@@ -791,7 +801,7 @@ export default function PublicCatalogPage() {
             </Link>
 
             {/* Desktop Nav Links */}
-            <div className="hidden lg:flex items-center gap-0.5 pl-4 border-l border-zinc-200">
+            <div className="hidden lg:flex items-center gap-1 pl-4 border-l border-zinc-200">
               {NAV_LINKS.map((link) =>
                 link.internal ? (
                   <Link
@@ -811,8 +821,13 @@ export default function PublicCatalogPage() {
                         scrollTo(link.href.slice(1));
                       }
                     }}
-                    className="text-xs px-3 py-1.5 text-zinc-600 hover:text-[#002FA7] hover:bg-[#002FA7]/5 transition-colors font-medium whitespace-nowrap"
+                    className={
+                      link.highlight
+                        ? "text-xs px-3.5 py-1.5 bg-[#002FA7] text-white hover:bg-[#002075] transition-colors font-semibold shadow-xs flex items-center gap-1.5 whitespace-nowrap"
+                        : "text-xs px-3 py-1.5 text-zinc-600 hover:text-[#002FA7] hover:bg-[#002FA7]/5 transition-colors font-medium whitespace-nowrap"
+                    }
                   >
+                    {link.highlight && <Sparkles size={11} className="text-blue-300" />}
                     {link.label}
                   </a>
                 )
@@ -915,9 +930,18 @@ export default function PublicCatalogPage() {
                       e.preventDefault();
                       scrollTo(link.href.slice(1));
                     }}
-                    className="text-sm px-3 py-2.5 text-zinc-700 hover:text-[#002FA7] hover:bg-[#002FA7]/5 transition-colors font-medium border-b border-zinc-100 last:border-0"
+                    className={`text-sm px-3 py-2.5 transition-colors font-medium border-b border-zinc-100 last:border-0 flex items-center justify-between ${
+                      link.highlight
+                        ? "bg-blue-50/70 text-[#002FA7] font-semibold"
+                        : "text-zinc-700 hover:text-[#002FA7] hover:bg-[#002FA7]/5"
+                    }`}
                   >
-                    {link.label}
+                    <span>{link.label}</span>
+                    {link.highlight && (
+                      <span className="text-[10px] font-mono uppercase bg-[#002FA7] text-white px-2 py-0.5">
+                        New
+                      </span>
+                    )}
                   </a>
                 )
               )}
@@ -960,14 +984,20 @@ export default function PublicCatalogPage() {
               {/* Hero CTA Buttons */}
               <div className="flex flex-wrap items-center gap-3 mt-7">
                 <button
-                  onClick={() => scrollTo("catalog-products")}
+                  onClick={() => scrollTo("services")}
                   className="px-6 py-3 bg-[#002FA7] hover:bg-[#002075] text-white text-sm font-semibold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm"
                 >
-                  <Gift size={15} /> Explore Products
+                  <Briefcase size={15} /> Our Services (9)
+                </button>
+                <button
+                  onClick={() => scrollTo("catalog-products")}
+                  className="px-6 py-3 border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white text-sm font-semibold uppercase tracking-wider transition-all flex items-center gap-2"
+                >
+                  <Gift size={15} /> Explore Products ({products.length})
                 </button>
                 <Link
                   to="/partners/register"
-                  className="px-6 py-3 border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white text-sm font-semibold uppercase tracking-wider transition-all flex items-center gap-2"
+                  className="px-5 py-3 text-zinc-600 hover:text-[#002FA7] text-sm font-semibold uppercase tracking-wider transition-all flex items-center gap-2"
                 >
                   <Users size={15} /> Become a Partner
                 </Link>
@@ -1051,6 +1081,83 @@ export default function PublicCatalogPage() {
           </div>
         </div>
       </header>
+
+      {/* ===== OUR SERVICES SECTION (HIGH VISIBILITY SPOTLIGHT) ===== */}
+      <section id="services" className="relative bg-[#F9FAFB] border-b border-zinc-200 py-16 sm:py-20 overflow-hidden">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 mb-3 shadow-2xs">
+              <Sparkles size={12} className="text-blue-600" />
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] font-bold text-blue-700">
+                End-to-End Enterprise Solutions
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+              Our Services
+            </h2>
+            <p className="text-zinc-500 text-xs sm:text-sm mt-2.5 leading-relaxed">
+              Comprehensive turnkey procurement, infrastructure, and business support tailored for modern companies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+            {services.map((svc) => (
+              <div
+                key={svc.id || svc.slug || svc.title}
+                onClick={() => handleServiceEnquire(svc)}
+                className="bg-white rounded-2xl border border-slate-200/80 p-7 sm:p-8 flex flex-col justify-between shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(37,99,235,0.08)] hover:border-blue-300 hover:-translate-y-1 transition-all duration-200 group cursor-pointer relative"
+              >
+                {/* Subtle top indicator on hover */}
+                <div className="absolute top-0 left-6 right-6 h-1 rounded-full bg-gradient-to-r from-blue-500 to-[#002FA7] opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] border border-blue-100/70 flex items-center justify-center text-[#2563EB] mb-5 group-hover:bg-[#2563EB] group-hover:text-white transition-all duration-300 shadow-2xs">
+                    <Wrench size={18} className="stroke-[2.2] transition-transform duration-300 group-hover:rotate-12" />
+                  </div>
+                  <h3 className="font-bold text-[18px] text-[#0F172A] group-hover:text-[#2563EB] leading-snug tracking-tight mb-2.5 transition-colors">
+                    {svc.title}
+                  </h3>
+                  <p className="text-[#64748B] text-[13.5px] leading-relaxed mb-6 font-normal">
+                    {svc.description}
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                  <span className="text-[#2563EB] hover:text-[#1D4ED8] font-semibold text-[13.5px] inline-flex items-center gap-1.5 transition-all">
+                    <span>Learn more</span>
+                    <span className="text-[15px] font-normal transition-transform group-hover:translate-x-1">→</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-slate-400 group-hover:text-blue-600 transition-colors uppercase tracking-wider font-medium">
+                    Enquire
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Quick Banner linking to Product Catalog below */}
+          <div className="mt-12 p-4 sm:p-5 bg-white border border-zinc-200 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
+            <div className="flex items-center gap-3 text-center sm:text-left">
+              <div className="w-9 h-9 rounded-lg bg-[#002FA7]/10 text-[#002FA7] flex items-center justify-center shrink-0">
+                <Gift size={18} />
+              </div>
+              <div>
+                <p className="text-xs sm:text-sm font-semibold text-zinc-900">Also looking for Corporate Gifting &amp; Hampers?</p>
+                <p className="text-[11px] sm:text-xs text-zinc-500">Explore {products.length}+ curated executive sets with custom logo branding below.</p>
+              </div>
+            </div>
+            <button
+              onClick={() => scrollTo("catalog-products")}
+              className="px-4 py-2 bg-[#002FA7] hover:bg-[#002075] text-white text-xs font-semibold uppercase tracking-wider transition-colors flex items-center gap-1.5 shrink-0"
+            >
+              Browse Catalog Products <ScrollDown size={13} />
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* ===== STICKY FILTER & CONTROLS CONSOLE ===== */}
       <section
@@ -1344,48 +1451,6 @@ export default function PublicCatalogPage() {
           </>
         )}
       </main>
-
-      {/* ===== OUR SERVICES SECTION ===== */}
-      <section id="services" className="bg-[#F8FAFC] border-t border-zinc-200 py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-14">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight">
-              Our Services
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-            {services.map((svc) => (
-              <div
-                key={svc.id || svc.slug || svc.title}
-                className="bg-white rounded-2xl border border-zinc-200/80 p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg hover:border-zinc-300 transition-all duration-300 group"
-              >
-                <div>
-                  <div className="w-11 h-11 rounded-xl bg-blue-50/90 border border-blue-100 flex items-center justify-center text-blue-600 mb-6">
-                    <Wrench size={20} className="stroke-[2.2] -rotate-45" />
-                  </div>
-                  <h3 className="font-bold text-lg text-zinc-900 tracking-tight leading-snug">
-                    {svc.title}
-                  </h3>
-                  <p className="text-zinc-500 text-sm leading-relaxed mt-2.5 mb-6">
-                    {svc.description}
-                  </p>
-                </div>
-
-                <div>
-                  <button
-                    type="button"
-                    onClick={() => handleServiceEnquire(svc)}
-                    className="text-blue-600 hover:text-blue-700 font-semibold text-sm inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all cursor-pointer"
-                  >
-                    Learn more <ArrowRight size={15} />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ===== WHY ONCOST ===== */}
       <section id="why-oncost" className="bg-white border-t border-zinc-200 py-16">
